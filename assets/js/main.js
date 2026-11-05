@@ -71,8 +71,10 @@
     onScroll();
 
     const page = document.body.dataset.page;
-    document.querySelectorAll('.nav-links a[data-nav]').forEach((link) => {
-      if (link.dataset.nav === page) link.classList.add('active');
+    document.querySelectorAll('.nav-links a[data-nav], .drawer-nav a[data-nav]').forEach((link) => {
+      if (link.dataset.nav === page || (link.dataset.nav === 'home' && (page === 'home' || page === 'home-2'))) {
+        link.classList.add('active');
+      }
     });
   }
 
@@ -99,6 +101,7 @@
       drawer.classList.contains('open') ? close() : open();
     });
     drawer.querySelector('.drawer-backdrop')?.addEventListener('click', close);
+    drawer.querySelector('.drawer-close')?.addEventListener('click', close);
     drawer.querySelectorAll('a').forEach((a) => a.addEventListener('click', close));
   }
 
