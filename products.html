@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse plywood by thickness and laminates by finish — STRATA PLY & LAMINATES product catalog.">
+  <title>Products | STRATA PLY & LAMINATES</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="products">
+
+  <header class="site-header" role="banner">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-logo" aria-label="STRATA home">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="64" height="64" rx="12" fill="currentColor" opacity="0.15"/>
+          <path d="M12 44 L32 18 L52 44" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="12" y1="44" x2="52" y2="44" stroke="var(--text-primary)" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="32" cy="14" r="3" fill="var(--accent-soft)"/>
+        </svg>
+        <div class="brand-text"><span class="brand-name">STRATA</span><span class="brand-descriptor">PLY & LAMINATES</span></div>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="home-2.html" data-nav="home-2">Home 2</a>
+        <a href="about.html" data-nav="about">About</a>
+        <a href="services.html" data-nav="services">Services</a>
+        <a href="products.html" data-nav="products">Products</a>
+        <a href="bulk-pricing.html" data-nav="pricing">Bulk Pricing</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="icon-btn" data-toggle-theme aria-label="Toggle theme"><span data-theme-icon></span></button>
+        <button type="button" class="icon-btn" data-toggle-rtl aria-label="Toggle text direction"><span data-rtl-label>RTL</span></button>
+        <a href="contact.html" class="btn btn-primary btn-primary-nav">Request Quote</a>
+        <button type="button" class="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+    <div class="drawer-backdrop"></div>
+    <div class="drawer-panel">
+      <nav class="drawer-nav">
+        <a href="index.html">Home</a><a href="home-2.html">Home 2</a><a href="about.html">About</a><a href="services.html">Services</a><a href="products.html">Products</a><a href="bulk-pricing.html">Bulk Pricing</a><a href="contact.html">Contact</a>
+      </nav>
+      <div class="drawer-actions">
+        <div class="drawer-toggles-row">
+          <button type="button" class="btn btn-outline drawer-toggle-btn" data-toggle-theme aria-label="Toggle theme">
+            <span data-theme-icon></span>
+            <span>Theme</span>
+          </button>
+          <button type="button" class="btn btn-outline drawer-toggle-btn" data-toggle-rtl aria-label="Toggle text direction">
+            <span data-rtl-label>RTL</span>
+          </button>
+        </div>
+        <a href="contact.html" class="btn btn-primary" style="width:100%">Request Quote</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="page-main">
+    <section class="page-hero" aria-labelledby="products-hero">
+      <img src="https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?auto=format&fit=crop&w=1600&q=80" alt="Laminate and wood surface samples" width="1600" height="900">
+      <div class="page-hero-overlay"></div>
+      <div class="container">
+        <p class="eyebrow">Catalog</p>
+        <h1 id="products-hero" class="display-heading">Products by Thickness & Finish</h1>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="filter-heading">
+      <div class="container">
+        <h2 id="filter-heading" class="section-heading reveal">Filter Your Selection</h2>
+        <p class="reveal" style="margin-top:0.75rem;color:var(--text-secondary)">Plywood grades by mm thickness · Laminates by surface finish · Specialty panels</p>
+
+        <p style="margin-top:2rem;font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted)">Thickness (Plywood)</p>
+        <div class="filter-bar reveal" role="group" aria-label="Thickness filters">
+          <button type="button" class="filter-btn active" data-filter="all">All Products</button>
+          <button type="button" class="filter-btn" data-filter="6mm">6mm</button>
+          <button type="button" class="filter-btn" data-filter="9mm">9mm</button>
+          <button type="button" class="filter-btn" data-filter="12mm">12mm</button>
+          <button type="button" class="filter-btn" data-filter="18mm">18mm</button>
+          <button type="button" class="filter-btn" data-filter="19mm">19mm</button>
+        </div>
+
+        <p style="margin-top:1.5rem;font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted)">Finish (Laminates)</p>
+        <div class="filter-bar reveal" role="group" aria-label="Finish filters">
+          <button type="button" class="filter-btn" data-filter="matte">Matte</button>
+          <button type="button" class="filter-btn" data-filter="gloss">High Gloss</button>
+          <button type="button" class="filter-btn" data-filter="texture">Texture / Sync</button>
+          <button type="button" class="filter-btn" data-filter="stone">Stone / Marble</button>
+        </div>
+
+        <div class="products-masonry" style="margin-top:2.5rem">
+          <article class="product-item featured reveal" data-thickness="18mm" data-finish="matte">
+            <div class="pi-image"><img src="https://images.unsplash.com/photo-1533090161762-e6ffed1ab713?w=900&q=80" alt="18mm BWP plywood" loading="lazy"></div>
+            <div class="pi-meta">
+              <span class="card-num">PLY · 18mm</span>
+              <h3>710 BWP Plywood</h3>
+              <p>Boiling water proof core for wet areas and exterior carpentry. Calibrated option available.</p>
+              <span class="finish-badge">BWP</span><span class="finish-badge">Calibrated</span>
+            </div>
+          </article>
+          <article class="product-item reveal" data-thickness="12mm" data-finish="matte">
+            <div class="pi-image"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="12mm commercial ply" loading="lazy"></div>
+            <div class="pi-meta">
+              <h3>12mm MR Ply</h3>
+              <p>Interior partitions, furniture carcass, dry zones.</p>
+              <span class="finish-badge">MR Grade</span>
+            </div>
+          </article>
+          <article class="product-item reveal" data-thickness="6mm" data-finish="matte">
+            <div class="pi-image"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80" alt="6mm backing ply" loading="lazy"></div>
+            <div class="pi-meta">
+              <h3>6mm Backing Ply</h3>
+              <p>Drawer bottoms, panel backing, lightweight structures.</p>
+              <span class="finish-badge">6mm</span>
+            </div>
+          </article>
+          <article class="product-item reveal" data-thickness="9mm" data-finish="gloss">
+            <div class="pi-image"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80" alt="High gloss laminate" loading="lazy"></div>
+            <div class="pi-meta">
+              <h3>High Gloss Laminates</h3>
+              <p>Mirror-finish surfaces for kitchens, retail, and feature panels.</p>
+              <span class="finish-badge">Gloss</span><span class="finish-badge">0.8mm</span>
+            </div>
+          </article>
+          <article class="product-item reveal" data-thickness="12mm" data-finish="texture">
+            <div class="pi-image"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80" alt="Synchronized wood texture laminate" loading="lazy"></div>
+            <div class="pi-meta">
+              <h3>Synchronized Woodgrain</h3>
+              <p>Registered emboss matching wood pore — premium residential lines.</p>
+              <span class="finish-badge">Texture</span>
+            </div>
+          </article>
+          <article class="product-item reveal" data-thickness="19mm" data-finish="matte">
+            <div class="pi-image"><img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80" alt="19mm calibrated plywood" loading="lazy"></div>
+            <div class="pi-meta">
+              <h3>19mm Calibrated Ply</h3>
+              <p>CNC-ready thickness tolerance for automated production lines.</p>
+              <span class="finish-badge">19mm</span><span class="finish-badge">BWR</span>
+            </div>
+          </article>
+          <article class="product-item reveal" data-thickness="18mm" data-finish="stone">
+            <div class="pi-image"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Stone finish laminate" loading="lazy"></div>
+            <div class="pi-meta">
+              <h3>Stone & Marble Laminates</h3>
+              <p>Large-format stone visuals for counters and wall cladding.</p>
+              <span class="finish-badge">Stone</span><span class="finish-badge">1mm</span>
+            </div>
+          </article>
+          <article class="product-item reveal" data-thickness="9mm" data-finish="matte">
+            <div class="pi-image"><img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=600&q=80" alt="Matte solid laminate" loading="lazy"></div>
+            <div class="pi-meta">
+              <h3>Solid Matte Collection</h3>
+              <p>Anti-fingerprint mark-free solids for office interiors and minimalist kitchens.</p>
+              <span class="finish-badge">Matte</span><span class="finish-badge">Mark-Free</span>
+            </div>
+          </article>
+        </div>
+
+        <div style="margin-top:3rem;text-align:center" class="reveal">
+          <button type="button" class="btn btn-primary" data-modal-open="modal-enquiry">Request Full Price List</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--bg-secondary)" aria-labelledby="finish-guide">
+      <div class="container">
+        <div class="comparison-visual reveal">
+          <div class="comparison-col">
+            <h2 id="finish-guide" style="font-size:1.75rem">Matte vs Gloss</h2>
+            <p style="margin-top:1rem;color:var(--text-secondary)">Matte hides fingerprints and suits large vertical surfaces. Gloss delivers depth and reflection for accent modules.</p>
+          </div>
+          <div class="comparison-col highlight">
+            <h3 style="font-size:1.75rem">Thickness Guide</h3>
+            <ul style="margin-top:1rem;color:var(--text-secondary);font-size:0.95rem;line-height:2">
+              <li>6–9mm — backing, drawers, lightweight</li>
+              <li>12mm — standard furniture shells</li>
+              <li>18–19mm — kitchens, wardrobes, structural</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo"><svg viewBox="0 0 64 64" width="40" height="40"><path d="M12 44 L32 18 L52 44" stroke="var(--accent)" stroke-width="3" fill="none"/></svg><div class="brand-text"><span class="brand-name">STRATA</span><span class="brand-descriptor">PLY & LAMINATES</span></div></a>
+          <p>Trade catalog — thickness and finish reference for enquiry purposes.</p>
+        </div>
+        <div class="footer-col"><h4>Explore</h4><ul><li><a href="index.html">Home (Trade)</a></li><li><a href="home-2.html">Home 2 (Decor)</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li></ul></div>
+        <div class="footer-col"><h4>Trade</h4><ul><li><a href="products.html">Products</a></li><li><a href="bulk-pricing.html">Bulk Pricing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Social</h4><div class="social-row"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="Facebook">FB</a></div></div>
+      </div>
+      <p class="footer-bottom">© 2026 STRATA PLY & LAMINATES</p>
+    </div>
+  </footer>
+
+  <div id="modal-enquiry" class="modal-root" role="dialog" aria-modal="true" aria-labelledby="modal-enquiry-title" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card">
+      <button type="button" class="modal-close" aria-label="Close">&times;</button>
+      <h2 id="modal-enquiry-title">Trade Enquiry</h2>
+      <form data-validate-form style="margin-top:1.5rem">
+        <div class="form-group"><label for="eq-name">Full Name</label><input id="eq-name" name="name" required><span class="form-error">Required</span></div>
+        <div class="form-group"><label for="eq-email">Email</label><input id="eq-email" type="email" name="email" required><span class="form-error">Valid email required</span></div>
+        <div class="form-group"><label for="eq-phone">Phone</label><input id="eq-phone" name="phone" type="tel" required><span class="form-error">Valid phone required</span></div>
+        <div class="form-group"><label for="eq-msg">Product list needed</label><textarea id="eq-msg" name="message" rows="3" required></textarea><span class="form-error">Required</span></div>
+        <button type="submit" class="btn btn-primary" style="width:100%">Submit</button>
+        <p class="form-success" hidden style="margin-top:1rem;text-align:center;color:var(--accent)">Enquiry received.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

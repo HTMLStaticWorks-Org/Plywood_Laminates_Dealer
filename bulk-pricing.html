@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bulk pricing slabs for plywood and laminates — STRATA trade volume rates.">
+  <title>Bulk Pricing | STRATA PLY & LAMINATES</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="pricing">
+
+  <header class="site-header" role="banner">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-logo" aria-label="STRATA home">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="64" height="64" rx="12" fill="currentColor" opacity="0.15"/><path d="M12 44 L32 18 L52 44" stroke="var(--accent)" stroke-width="3"/><line x1="12" y1="44" x2="52" y2="44" stroke="currentColor" stroke-width="2"/></svg>
+        <div class="brand-text"><span class="brand-name">STRATA</span><span class="brand-descriptor">PLY & LAMINATES</span></div>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="home-2.html" data-nav="home-2">Home 2</a>
+        <a href="about.html" data-nav="about">About</a>
+        <a href="services.html" data-nav="services">Services</a>
+        <a href="products.html" data-nav="products">Products</a>
+        <a href="bulk-pricing.html" data-nav="pricing">Bulk Pricing</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="icon-btn" data-toggle-theme aria-label="Toggle theme"><span data-theme-icon></span></button>
+        <button type="button" class="icon-btn" data-toggle-rtl aria-label="Toggle RTL"><span data-rtl-label>RTL</span></button>
+        <a href="contact.html" class="btn btn-primary btn-primary-nav">Request Quote</a>
+        <button type="button" class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+    <div class="drawer-backdrop"></div>
+    <div class="drawer-panel">
+      <nav class="drawer-nav"><a href="index.html">Home</a><a href="home-2.html">Home 2</a><a href="about.html">About</a><a href="services.html">Services</a><a href="products.html">Products</a><a href="bulk-pricing.html">Bulk Pricing</a><a href="contact.html">Contact</a></nav>
+      <div class="drawer-actions">
+        <div class="drawer-toggles-row">
+          <button type="button" class="btn btn-outline drawer-toggle-btn" data-toggle-theme aria-label="Toggle theme">
+            <span data-theme-icon></span>
+            <span>Theme</span>
+          </button>
+          <button type="button" class="btn btn-outline drawer-toggle-btn" data-toggle-rtl aria-label="Toggle text direction">
+            <span data-rtl-label>RTL</span>
+          </button>
+        </div>
+        <a href="contact.html" class="btn btn-primary" style="width:100%">Request Quote</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="page-main">
+    <section class="split-hero" aria-labelledby="pricing-hero">
+      <div class="split-hero-content">
+        <p class="eyebrow">Volume Supply</p>
+        <h1 id="pricing-hero" class="section-heading">Make Bulk Buying Predictable</h1>
+        <p style="margin-top:1rem;color:var(--text-secondary)">Slab rates for plywood lots, laminate bundles, and mixed project containers — structured like leading surface distributors.</p>
+        <button type="button" class="btn btn-primary" style="margin-top:1.5rem;align-self:flex-start" data-modal-open="modal-bulk">Open Bulk Enquiry</button>
+      </div>
+      <div class="split-hero-media">
+        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1200&q=80" alt="Bulk panel inventory in warehouse" width="1200" height="800">
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="slabs-heading">
+      <div class="container">
+        <p class="eyebrow reveal">Pricing Slabs</p>
+        <h2 id="slabs-heading" class="section-heading reveal">Trade Volume Tiers</h2>
+        <p class="reveal" style="margin-top:0.75rem;color:var(--text-muted);font-size:0.9rem">Indicative structure only — final rates on enquiry. GST and freight extra.</p>
+
+        <div class="pricing-horizontal" style="margin-top:2.5rem">
+          <article class="pricing-tier reveal">
+            <h3>Starter Lot</h3>
+            <p class="price">Slab A</p>
+            <p style="font-size:0.85rem;color:var(--text-muted)">50–100 sheets / boards</p>
+            <ul>
+              <li>Laminates 0.8mm & 1mm mixes</li>
+              <li>Standard MR / BWR ply</li>
+              <li>48hr rate confirmation</li>
+              <li>Single dispatch point</li>
+            </ul>
+            <button type="button" class="btn btn-outline" style="width:100%" data-modal-open="modal-bulk" data-plan="starter">Select Lot</button>
+          </article>
+          <article class="pricing-tier featured reveal">
+            <span class="savings-tag">Popular</span>
+            <h3>Project Pack</h3>
+            <p class="price">Slab B</p>
+            <p style="font-size:0.85rem;color:var(--text-muted)">100–500 sheets / mixed ply</p>
+            <ul>
+              <li>BWP & calibrated ply options</li>
+              <li>Matched edge band bundles</li>
+              <li>Staged delivery schedule</li>
+              <li>Dedicated trade coordinator</li>
+            </ul>
+            <button type="button" class="btn btn-accent" style="width:100%" data-modal-open="modal-bulk" data-plan="project">Select Lot</button>
+          </article>
+          <article class="pricing-tier reveal">
+            <h3>Factory Feed</h3>
+            <p class="price">Slab C</p>
+            <p style="font-size:0.85rem;color:var(--text-muted)">500+ sheets / monthly feed</p>
+            <ul>
+              <li>Repeat SKU locking</li>
+              <li>Container-wise laminate import slots</li>
+              <li>Credit terms on approval</li>
+              <li>Priority restock alerts</li>
+            </ul>
+            <button type="button" class="btn btn-outline" style="width:100%" data-modal-open="modal-bulk" data-plan="factory">Select Lot</button>
+          </article>
+          <article class="pricing-tier reveal">
+            <h3>Enterprise</h3>
+            <p class="price">Custom</p>
+            <p style="font-size:0.85rem;color:var(--text-muted)">Multi-city projects & OEM</p>
+            <ul>
+              <li>Architect & BOQ support</li>
+              <li>Brand-matched alternatives</li>
+              <li>Pan-India logistics partners</li>
+              <li>Quarterly rate contracts</li>
+            </ul>
+            <button type="button" class="btn btn-outline" style="width:100%" data-modal-open="modal-bulk" data-plan="enterprise">Contact Sales</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--bg-secondary)" aria-labelledby="benefits-heading">
+      <div class="container">
+        <h2 id="benefits-heading" class="section-heading reveal">Included With Bulk Accounts</h2>
+        <div class="benefits-grid-4" style="margin-top:2.5rem">
+          <div class="benefit-tile reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>
+            <h3>Order Tracking</h3>
+            <p style="font-size:0.875rem;color:var(--text-muted);margin-top:0.5rem">Dispatch updates and packing lists by email.</p>
+          </div>
+          <div class="benefit-tile reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/></svg>
+            <h3>Sample Chips</h3>
+            <p style="font-size:0.875rem;color:var(--text-muted);margin-top:0.5rem">Laminate swatches for client approvals.</p>
+          </div>
+          <div class="benefit-tile reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            <h3>Mix Containers</h3>
+            <p style="font-size:0.875rem;color:var(--text-muted);margin-top:0.5rem">Ply + laminate + edge in one shipment.</p>
+          </div>
+          <div class="benefit-tile reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <h3>Grade Assurance</h3>
+            <p style="font-size:0.875rem;color:var(--text-muted);margin-top:0.5rem">Batch labels and thickness verification.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" aria-labelledby="compare-heading">
+      <div class="container reveal">
+        <h2 id="compare-heading" class="section-heading">Retail vs Bulk</h2>
+        <div class="comparison-visual" style="margin-top:2rem;background:transparent;gap:1rem">
+          <div class="comparison-col" style="background:color-mix(in srgb, currentColor 6%, transparent);color:inherit">
+            <h3>Counter Purchase</h3>
+            <p style="margin-top:0.75rem;opacity:0.85">Small lots, immediate pickup, standard MRP-based pricing.</p>
+          </div>
+          <div class="comparison-col highlight" style="background:color-mix(in srgb, var(--accent) 25%, transparent);border:1px solid var(--accent-soft)">
+            <h3>Bulk Enquiry</h3>
+            <p style="margin-top:0.75rem;opacity:0.85">Slab discounts, project scheduling, and account history.</p>
+            <a href="contact.html" class="btn btn-accent" style="margin-top:1rem">Contact Studio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo"><svg viewBox="0 0 64 64" width="40" height="40"><path d="M12 44 L32 18 L52 44" stroke="var(--accent)" stroke-width="3" fill="none"/></svg><div class="brand-text"><span class="brand-name">STRATA</span><span class="brand-descriptor">PLY & LAMINATES</span></div></a>
+          <p>Volume supply and container pricing for plywood, laminates, acrylic panels, and edge bands.</p>
+        </div>
+        <div class="footer-col"><h4>Pages</h4><ul><li><a href="index.html">Home (Trade)</a></li><li><a href="home-2.html">Home 2 (Decor)</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li></ul></div>
+        <div class="footer-col"><h4>Trade</h4><ul><li><a href="products.html">Products</a></li><li><a href="bulk-pricing.html">Bulk Pricing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Studio</h4><ul><li><a href="services.html">Swatch Dispatch</a></li><li><a href="about.html">Quality & ISI Grades</a></li></ul></div>
+      </div>
+      <p class="footer-bottom">© 2026 STRATA PLY & LAMINATES · Bulk pricing indicative only</p>
+    </div>
+  </footer>
+
+  <div id="modal-bulk" class="modal-root" role="dialog" aria-modal="true" aria-labelledby="modal-bulk-title" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card">
+      <button type="button" class="modal-close" aria-label="Close">&times;</button>
+      <h2 id="modal-bulk-title">Bulk Enquiry</h2>
+      <form data-validate-form style="margin-top:1.5rem">
+        <div class="form-group"><label for="bq-name">Full Name</label><input id="bq-name" name="name" required><span class="form-error">Required</span></div>
+        <div class="form-group"><label for="bq-email">Email</label><input id="bq-email" type="email" name="email" required><span class="form-error">Valid email required</span></div>
+        <div class="form-group"><label for="bq-phone">Phone</label><input id="bq-phone" name="phone" type="tel" required><span class="form-error">Valid phone required</span></div>
+        <div class="form-group"><label for="bq-plan">Select slab</label>
+          <select id="bq-plan" name="plan">
+            <option value="starter">Starter Lot</option>
+            <option value="project">Project Pack</option>
+            <option value="factory">Factory Feed</option>
+            <option value="enterprise">Enterprise</option>
+          </select>
+        </div>
+        <div class="form-group"><label for="bq-freq">Monthly volume (approx.)</label><input id="bq-freq" name="volume" placeholder="e.g. 200 sheets" required><span class="form-error">Required</span></div>
+        <button type="submit" class="btn btn-primary" style="width:100%">Continue to Confirmation</button>
+        <p class="form-success" hidden style="margin-top:1rem;text-align:center;color:var(--accent)">Bulk enquiry submitted — our team will call you.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

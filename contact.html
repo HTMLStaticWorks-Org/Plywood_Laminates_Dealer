@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact STRATA PLY & LAMINATES — trade enquiry form, showroom hours, and dealer information.">
+  <title>Contact | STRATA PLY & LAMINATES</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="contact">
+
+  <header class="site-header" role="banner">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-logo" aria-label="STRATA home">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="64" height="64" rx="12" fill="currentColor" opacity="0.15"/><path d="M12 44 L32 18 L52 44" stroke="var(--accent)" stroke-width="3"/><line x1="12" y1="44" x2="52" y2="44" stroke="currentColor" stroke-width="2"/></svg>
+        <div class="brand-text"><span class="brand-name">STRATA</span><span class="brand-descriptor">PLY & LAMINATES</span></div>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="home-2.html" data-nav="home-2">Home 2</a>
+        <a href="about.html" data-nav="about">About</a>
+        <a href="services.html" data-nav="services">Services</a>
+        <a href="products.html" data-nav="products">Products</a>
+        <a href="bulk-pricing.html" data-nav="pricing">Bulk Pricing</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="icon-btn" data-toggle-theme aria-label="Toggle theme"><span data-theme-icon></span></button>
+        <button type="button" class="icon-btn" data-toggle-rtl aria-label="Toggle RTL"><span data-rtl-label>RTL</span></button>
+        <a href="contact.html" class="btn btn-primary btn-primary-nav">Request Quote</a>
+        <button type="button" class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+    <div class="drawer-backdrop"></div>
+    <div class="drawer-panel">
+      <nav class="drawer-nav"><a href="index.html">Home</a><a href="home-2.html">Home 2</a><a href="about.html">About</a><a href="services.html">Services</a><a href="products.html">Products</a><a href="bulk-pricing.html">Bulk Pricing</a><a href="contact.html">Contact</a></nav>
+      <div class="drawer-actions">
+        <div class="drawer-toggles-row">
+          <button type="button" class="btn btn-outline drawer-toggle-btn" data-toggle-theme aria-label="Toggle theme">
+            <span data-theme-icon></span>
+            <span>Theme</span>
+          </button>
+          <button type="button" class="btn btn-outline drawer-toggle-btn" data-toggle-rtl aria-label="Toggle text direction">
+            <span data-rtl-label>RTL</span>
+          </button>
+        </div>
+        <a href="contact.html" class="btn btn-primary" style="width:100%">Request Quote</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="page-main">
+    <section class="page-hero" aria-labelledby="contact-hero">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80" alt="Showroom interior with wood surfaces" width="1600" height="900">
+      <div class="page-hero-overlay"></div>
+      <div class="container">
+        <p class="eyebrow">Get in Touch</p>
+        <h1 id="contact-hero" class="display-heading">Plan Your Next Order</h1>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="form-heading">
+      <div class="container contact-split">
+        <div class="form-card reveal" id="enquiry-form-card">
+          <h2 id="form-heading" class="section-heading" style="font-size:2rem">Enquiry Form</h2>
+          <p style="margin-top:0.5rem;color:var(--text-muted);font-size:0.9rem">Share project details — thickness, finish, quantity, and delivery city.</p>
+          <form data-validate-form style="margin-top:1.75rem" aria-label="Contact enquiry">
+            <div class="form-group">
+              <label for="c-name">Full Name</label>
+              <input id="c-name" name="name" autocomplete="name" required>
+              <span class="form-error">Please enter your name</span>
+            </div>
+            <div class="form-group">
+              <label for="c-email">Email</label>
+              <input id="c-email" name="email" type="email" autocomplete="email" required>
+              <span class="form-error">Please enter a valid email</span>
+            </div>
+            <div class="form-group">
+              <label for="c-phone">Phone</label>
+              <input id="c-phone" name="phone" type="tel" autocomplete="tel" required>
+              <span class="form-error">Please enter a valid phone number</span>
+            </div>
+            <div class="form-group">
+              <label for="c-service">Preferred Product</label>
+              <select id="c-service" name="service" required>
+                <option value="">Select…</option>
+                <option value="plywood">Plywood</option>
+                <option value="laminates">Laminates</option>
+                <option value="acrylic">Acrylic / Edge</option>
+                <option value="bulk">Bulk / Mixed</option>
+              </select>
+              <span class="form-error">Please select a product type</span>
+            </div>
+            <div class="form-group">
+              <label for="c-date">Preferred Delivery Window</label>
+              <input id="c-date" name="date" type="date" required>
+              <span class="form-error">Please choose a date</span>
+            </div>
+            <div class="form-group">
+              <label for="c-message">Message</label>
+              <textarea id="c-message" name="message" rows="4" required placeholder="SKU list, thickness, finish codes…"></textarea>
+              <span class="form-error">Please add your requirements</span>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%">Submit Request</button>
+            <p class="form-success" hidden style="margin-top:1rem;text-align:center;color:var(--accent);font-weight:600">Request submitted — we will respond shortly.</p>
+          </form>
+        </div>
+
+        <div class="reveal">
+          <h2 class="section-heading" style="font-size:2rem">Studio Information</h2>
+          <div class="info-list" style="margin-top:2rem">
+            <div class="info-block">
+              <h4>Trade Showroom Address</h4>
+              <p>Plot 00, Industrial Estate Phase II<br>Your City, State 000000<br>India</p>
+            </div>
+            <div class="info-block">
+              <h4>Phone</h4>
+              <p>+91 00000 00000 (Sales)<br>+91 00000 00001 (Bulk Desk)</p>
+            </div>
+            <div class="info-block">
+              <h4>Email</h4>
+              <p>trade@strata-ply.example<br>bulk@strata-ply.example</p>
+            </div>
+            <div class="info-block">
+              <h4>Opening Hours</h4>
+              <p>Mon – Sat: 9:30 AM – 7:00 PM<br>Sunday: By appointment</p>
+            </div>
+          </div>
+
+          <div class="member-card-interactive reveal" tabindex="0" role="button" onclick="location.href='bulk-pricing.html'">
+            <h3 style="font-size:1.5rem">Ordering in Volume?</h3>
+            <p style="margin-top:0.75rem;color:var(--text-secondary)">View slab pricing and open a bulk enquiry — structured for contractors and fabricators.</p>
+            <span class="btn btn-outline" style="margin-top:1.25rem;display:inline-flex">View Bulk Pricing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0" aria-label="Showroom gallery">
+      <div class="container">
+        <div class="gallery-grid reveal">
+          <img class="g1" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80" alt="Laminate display wall" loading="lazy">
+          <img class="g2" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80" alt="Sample chips on table" loading="lazy">
+          <img class="g3" src="https://images.unsplash.com/photo-1533090161762-e6ffed1ab713?w=500&q=80" alt="Plywood edge detail" loading="lazy">
+          <img class="g4" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80" alt="Trade counter consultation" loading="lazy">
+          <img class="g5" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80" alt="High gloss panel sample" loading="lazy">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo"><svg viewBox="0 0 64 64" width="40" height="40"><path d="M12 44 L32 18 L52 44" stroke="var(--accent)" stroke-width="3" fill="none"/></svg><div class="brand-text"><span class="brand-name">STRATA</span><span class="brand-descriptor">PLY & LAMINATES</span></div></a>
+          <p>Premium plywood, laminates, acrylic panels, and edge bands — architectural surface solutions across India.</p>
+        </div>
+        <div class="footer-col"><h4>Pages</h4><ul><li><a href="index.html">Home (Trade)</a></li><li><a href="home-2.html">Home 2 (Decor)</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li></ul></div>
+        <div class="footer-col"><h4>Trade</h4><ul><li><a href="products.html">Products</a></li><li><a href="bulk-pricing.html">Bulk Pricing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Studio</h4><ul><li><a href="services.html">Swatch Dispatch</a></li><li><a href="about.html">Quality & ISI Grades</a></li></ul></div>
+      </div>
+      <div class="newsletter-box">
+        <div><h3 style="font-size:1.35rem">Stay on Top of New Arrivals</h3></div>
+        <form class="newsletter-form" data-newsletter><input type="email" placeholder="Email address" required aria-label="Email"><button type="submit" class="btn btn-primary">Subscribe</button></form>
+        <p class="newsletter-msg" style="width:100%;font-size:0.85rem"></p>
+      </div>
+      <p class="footer-bottom">© 2026 STRATA PLY & LAMINATES · Placeholder contact details</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
