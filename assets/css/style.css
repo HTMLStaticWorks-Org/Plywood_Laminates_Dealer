@@ -1918,33 +1918,27 @@ h1, h2, h3, h4 {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 1.25rem 1.25rem 1rem;
-  background: linear-gradient(to top, rgba(14, 12, 10, 0.85) 0%, rgba(14, 12, 10, 0.4) 60%, transparent 100%);
+  padding: 1rem 1.15rem 0.85rem;
+  background: linear-gradient(to top, rgba(14, 12, 10, 0.88) 0%, rgba(14, 12, 10, 0.45) 60%, transparent 100%);
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
-  gap: 0.5rem;
+  justify-content: flex-start;
   z-index: 2;
+  pointer-events: none;
 }
 
 .dorby-card-tag span.label {
   color: #ffffff;
   font-weight: 700;
-  font-size: 0.95rem;
-  letter-spacing: 0.02em;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  font-size: clamp(0.85rem, 2vw, 1.05rem);
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+  word-break: break-word;
 }
 
 .dorby-card-tag span.badge-spec {
-  font-size: 0.65rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  background: rgba(255, 255, 255, 0.22);
-  backdrop-filter: blur(8px);
-  color: #fff;
-  padding: 0.2rem 0.5rem;
-  border-radius: 3px;
+  display: none !important;
 }
 
 /* 1. LAMINATES 8-ITEM ASYMMETRIC BENTO GRID (exact Dorby screenshot 1) */
@@ -2509,6 +2503,30 @@ h1, h2, h3, h4 {
 
   .product-scroll-card.wide-card {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid-laminates-dorby,
+  .grid-edge-dorby,
+  .grid-acrylic-dorby {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .grid-laminates-dorby .card-hero-door,
+  .grid-edge-dorby .card-edge-hero,
+  .grid-acrylic-dorby .card-acrylic-hero {
+    grid-column: span 2;
+    height: 240px;
+  }
+
+  .dorby-card-tag {
+    padding: 0.65rem 0.75rem;
+  }
+
+  .dorby-card-tag span.label {
+    font-size: 0.82rem;
   }
 }
 
