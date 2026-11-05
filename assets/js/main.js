@@ -26,10 +26,10 @@
 
   function updateThemeIcon() {
     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const sunSvg = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.5 1.5M18.7 5.3l-1.5 1.5M5.3 18.7l1.5-1.5M18.7 18.7l-1.5-1.5"/></svg>';
+    const moonSvg = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
     document.querySelectorAll('[data-theme-icon]').forEach((el) => {
-      el.innerHTML = isDark
-        ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
-        : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+      el.innerHTML = isDark ? moonSvg : sunSvg;
     });
   }
 
@@ -53,6 +53,10 @@
     const isRtl = document.documentElement.getAttribute('dir') === 'rtl';
     document.querySelectorAll('[data-rtl-label]').forEach((el) => {
       el.textContent = isRtl ? 'LTR' : 'RTL';
+    });
+    document.querySelectorAll('[data-toggle-rtl]').forEach((btn) => {
+      btn.setAttribute('aria-pressed', isRtl ? 'true' : 'false');
+      btn.classList.toggle('active', isRtl);
     });
   }
 
@@ -96,13 +100,6 @@
     });
     drawer.querySelector('.drawer-backdrop')?.addEventListener('click', close);
     drawer.querySelectorAll('a').forEach((a) => a.addEventListener('click', close));
-
-    document.querySelectorAll('[data-toggle-theme]').forEach((btn) => {
-      btn.addEventListener('click', toggleTheme);
-    });
-    document.querySelectorAll('[data-toggle-rtl]').forEach((btn) => {
-      btn.addEventListener('click', toggleRTL);
-    });
   }
 
   /* ——— Scroll reveal ——— */

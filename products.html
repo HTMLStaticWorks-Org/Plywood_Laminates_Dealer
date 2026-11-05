@@ -31,8 +31,13 @@
         <a href="contact.html" data-nav="contact">Contact</a>
       </nav>
       <div class="nav-actions">
-        <button type="button" class="icon-btn" data-toggle-theme aria-label="Toggle theme"><span data-theme-icon></span></button>
-        <button type="button" class="icon-btn" data-toggle-rtl aria-label="Toggle text direction"><span data-rtl-label>RTL</span></button>
+        <button type="button" class="icon-btn" data-toggle-rtl aria-label="Toggle text direction" title="Toggle RTL / LTR direction">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 8h14M15 4l4 4-4 4"/>
+            <path d="M19 16H5M9 12l-4 4 4 4"/>
+          </svg>
+        </button>
+        <button type="button" class="icon-btn" data-toggle-theme aria-label="Toggle theme" title="Toggle Light / Dark theme"><span data-theme-icon></span></button>
         <a href="contact.html" class="btn btn-primary btn-primary-nav">Request Quote</a>
         <button type="button" class="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
@@ -47,12 +52,16 @@
       </nav>
       <div class="drawer-actions">
         <div class="drawer-toggles-row">
+          <button type="button" class="btn btn-outline drawer-toggle-btn" data-toggle-rtl aria-label="Toggle text direction">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 8h14M15 4l4 4-4 4"/>
+              <path d="M19 16H5M9 12l-4 4 4 4"/>
+            </svg>
+            <span data-rtl-label>RTL</span>
+          </button>
           <button type="button" class="btn btn-outline drawer-toggle-btn" data-toggle-theme aria-label="Toggle theme">
             <span data-theme-icon></span>
             <span>Theme</span>
-          </button>
-          <button type="button" class="btn btn-outline drawer-toggle-btn" data-toggle-rtl aria-label="Toggle text direction">
-            <span data-rtl-label>RTL</span>
           </button>
         </div>
         <a href="contact.html" class="btn btn-primary" style="width:100%">Request Quote</a>

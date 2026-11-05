@@ -203,21 +203,33 @@ h1, h2, h3, h4 {
 }
 
 .icon-btn {
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   border: 1px solid var(--border);
   background: var(--bg-elevated);
   color: var(--text-primary);
-  border-radius: var(--radius);
+  border-radius: 10px;
   cursor: pointer;
-  display: grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
   transition: transform var(--transition), border-color var(--transition), background var(--transition);
 }
 
 .icon-btn:hover {
   transform: translateY(-2px);
   border-color: var(--accent-soft);
+}
+
+.icon-btn:active,
+.icon-btn.active {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.icon-btn svg {
+  display: block;
 }
 
 .btn {
@@ -387,7 +399,7 @@ h1, h2, h3, h4 {
   font-size: 0.85rem;
   font-weight: 600;
   width: 100%;
-  border-radius: var(--radius);
+  border-radius: 10px;
 }
 
 .drawer-toggle-btn svg {
