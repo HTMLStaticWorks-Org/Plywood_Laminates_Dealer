@@ -487,6 +487,141 @@
     });
   }
 
+  /* ——— Video Features (Home 1 & Home 2) ——— */
+  function initHeroVideoToggle() {
+    const btn = document.querySelector('[data-hero-video-toggle]');
+    const video = document.querySelector('.hero-bg-video');
+    if (!btn || !video) return;
+
+    btn.addEventListener('click', () => {
+      if (video.paused) {
+        video.play();
+        btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg><span>Pause Motion</span>';
+      } else {
+        video.pause();
+        btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg><span>Play Motion</span>';
+      }
+    });
+  }
+
+  function initFilmstripReels() {
+    const cards = document.querySelectorAll('.filmstrip-card');
+    cards.forEach((card) => {
+      const video = card.querySelector('.filmstrip-video');
+      const playBtn = card.querySelector('.filmstrip-play-btn');
+      if (!video) return;
+
+      const togglePlay = () => {
+        if (video.paused) {
+          video.play();
+          if (playBtn) playBtn.style.opacity = '0';
+        } else {
+          video.pause();
+          if (playBtn) playBtn.style.opacity = '0.9';
+        }
+      };
+
+      if (playBtn) playBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        togglePlay();
+      });
+
+      card.addEventListener('mouseenter', () => {
+        if (video.paused) {
+          video.play().catch(() => {});
+          if (playBtn) playBtn.style.opacity = '0';
+        }
+      });
+
+      card.addEventListener('mouseleave', () => {
+        video.pause();
+        if (playBtn) playBtn.style.opacity = '0.85';
+      });
+    });
+  }
+
+  function initStudioTheater() {
+    const section = document.querySelector('.section-theater');
+    if (!section) return;
+
+    const masterVideo = section.querySelector('.theater-master-video');
+    const playBtn = section.querySelector('[data-theater-play]');
+    const muteBtn = section.querySelector('[data-theater-mute]');
+    const fullBtn = section.querySelector('[data-theater-fullscreen]');
+    const timecode = section.querySelector('.theater-timecode');
+    const titleEl = section.querySelector('.theater-scene-title');
+    const hudEl = section.querySelector('.theater-scene-hud');
+    const channelCards = section.querySelectorAll('.channel-card');
+
+    if (!masterVideo) return;
+
+    const fmt = (s) => {
+      if (isNaN(s)) return '00:00';
+      const m = Math.floor(s / 60);
+      const sec = Math.floor(s % 60);
+      return `${String(m).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
+    };
+
+    masterVideo.addEventListener('timeupdate', () => {
+      if (timecode) {
+        timecode.textContent = `${fmt(masterVideo.currentTime)} / ${fmt(masterVideo.duration)}`;
+      }
+    });
+
+    if (playBtn) {
+      playBtn.addEventListener('click', () => {
+        if (masterVideo.paused) {
+          masterVideo.play();
+          playBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>';
+        } else {
+          masterVideo.pause();
+          playBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>';
+        }
+      });
+    }
+
+    if (muteBtn) {
+      muteBtn.addEventListener('click', () => {
+        masterVideo.muted = !masterVideo.muted;
+        muteBtn.innerHTML = masterVideo.muted
+          ? '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>'
+          : '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>';
+      });
+    }
+
+    if (fullBtn) {
+      fullBtn.addEventListener('click', () => {
+        if (masterVideo.requestFullscreen) {
+          masterVideo.requestFullscreen();
+        } else if (masterVideo.webkitRequestFullscreen) {
+          masterVideo.webkitRequestFullscreen();
+        }
+      });
+    }
+
+    channelCards.forEach((card) => {
+      card.addEventListener('click', () => {
+        const src = card.dataset.videoSrc;
+        const title = card.dataset.videoTitle;
+        const hud = card.dataset.videoHud;
+
+        if (src && masterVideo.getAttribute('src') !== src) {
+          masterVideo.src = src;
+          masterVideo.load();
+          masterVideo.play().catch(() => {});
+          if (playBtn) {
+            playBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>';
+          }
+        }
+        if (titleEl && title) titleEl.textContent = title;
+        if (hudEl && hud) hudEl.textContent = hud;
+
+        channelCards.forEach((c) => c.classList.remove('active'));
+        card.classList.add('active');
+      });
+    });
+  }
+
   /* ——— Init ——— */
   document.querySelectorAll('[data-toggle-theme]').forEach((btn) => {
     btn.addEventListener('click', toggleTheme);
@@ -509,6 +644,9 @@
   initHeroSwatches();
   initSpaceVisualizer();
   initDorbyShowcase();
+  initHeroVideoToggle();
+  initFilmstripReels();
+  initStudioTheater();
   initImageFallbacks();
 
   window.strataOpenModal = openModal;

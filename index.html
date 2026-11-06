@@ -191,8 +191,13 @@
     <!-- Section 1: Hero -->
     <section class="hero-cinematic" aria-labelledby="hero-heading">
       <div class="hero-bg">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80"
-          alt="Premium wood interior with warm lighting" width="1920" height="1080" fetchpriority="high">
+        <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80" class="hero-bg-video">
+          <source src="assets/v/4248456-hd_1920_1080_24fps.mp4" type="video/mp4">
+        </video>
+        <button type="button" class="hero-video-toggle" data-hero-video-toggle aria-label="Toggle ambient background motion">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+          <span>Pause Motion</span>
+        </button>
       </div>
       <div class="hero-overlay"></div>
       <div class="hero-visual-3d" aria-hidden="true">
@@ -529,6 +534,114 @@
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <!-- Section 2.5: Materiality In Motion (Architectural Cinema Reel) -->
+    <section class="section section-filmstrip" aria-labelledby="filmstrip-heading">
+      <div class="container">
+        <div class="filmstrip-header">
+          <div>
+            <p class="eyebrow reveal">Atelier In Motion</p>
+            <h2 id="filmstrip-heading" class="section-heading reveal">Precision Core to Synchronized Texture</h2>
+            <p class="reveal" style="margin-top:0.6rem;max-width:62ch;color:var(--text-secondary)">
+              Witness calibrated core pressing, high-pressure texture engraving, and surface reflections crafted in continuous motion.
+            </p>
+          </div>
+          <button type="button" class="btn btn-outline reveal" data-modal-open="modal-enquiry">Request Production Tour</button>
+        </div>
+
+        <div class="filmstrip-grid">
+          <!-- Reel 1: Core Calibration & Pressing -->
+          <article class="filmstrip-card reveal">
+            <div class="filmstrip-media">
+              <video class="filmstrip-video" muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1533090161762-e6ffed1ab713?auto=format&fit=crop&w=800&q=80">
+                <source src="assets/v/8447821-hd_1920_1080_30fps.mp4" type="video/mp4">
+              </video>
+              <span class="filmstrip-badge">Core Pressing</span>
+              <span class="filmstrip-duration">00:07 · HD</span>
+              <button type="button" class="filmstrip-play-btn" aria-label="Play Reel 01">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </button>
+            </div>
+            <div class="filmstrip-body">
+              <h3 class="filmstrip-title">IS:710 Calibrated Assembly</h3>
+              <p class="filmstrip-desc">
+                High-density hardwood veneers undergo 4-stage hydraulic cold and hot pressing with zero internal gaps or core overlaps.
+              </p>
+              <div class="filmstrip-specs">
+                <div class="filmstrip-spec-item">
+                  <span>Tolerance</span>
+                  <strong>±0.15mm Calibrated</strong>
+                </div>
+                <div class="filmstrip-spec-item">
+                  <span>Bonding</span>
+                  <strong>Phenolic BWP Resin</strong>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Reel 2: Synchronized Texture & Engraving -->
+          <article class="filmstrip-card reveal">
+            <div class="filmstrip-media">
+              <video class="filmstrip-video" muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80">
+                <source src="assets/v/8447837-hd_1920_1080_30fps.mp4" type="video/mp4">
+              </video>
+              <span class="filmstrip-badge">Synchronized Press</span>
+              <span class="filmstrip-duration">00:09 · HD</span>
+              <button type="button" class="filmstrip-play-btn" aria-label="Play Reel 02">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </button>
+            </div>
+            <div class="filmstrip-body">
+              <h3 class="filmstrip-title">Tactile Grain Embossing</h3>
+              <p class="filmstrip-desc">
+                Laser-etched caul plates impress microscopic ridges directly along the woodgrain print, delivering true organic warmth.
+              </p>
+              <div class="filmstrip-specs">
+                <div class="filmstrip-spec-item">
+                  <span>Thickness</span>
+                  <strong>1.25mm Luxury Series</strong>
+                </div>
+                <div class="filmstrip-spec-item">
+                  <span>Surface</span>
+                  <strong>Sassy & Synchro</strong>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Reel 3: Optical Light Play & Sheen -->
+          <article class="filmstrip-card reveal">
+            <div class="filmstrip-media">
+              <video class="filmstrip-video" muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&q=80">
+                <source src="assets/v/5206339-hd_1920_1080_25fps.mp4" type="video/mp4">
+              </video>
+              <span class="filmstrip-badge">Optical Refraction</span>
+              <span class="filmstrip-duration">00:10 · HD</span>
+              <button type="button" class="filmstrip-play-btn" aria-label="Play Reel 03">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </button>
+            </div>
+            <div class="filmstrip-body">
+              <h3 class="filmstrip-title">6H Optical Surface Sheen</h3>
+              <p class="filmstrip-desc">
+                Mirror-like acrylic and super-matte anti-fingerprint surfaces tested under high-lumen architectural downlights.
+              </p>
+              <div class="filmstrip-specs">
+                <div class="filmstrip-spec-item">
+                  <span>Hardness</span>
+                  <strong>6H Anti-Scratch</strong>
+                </div>
+                <div class="filmstrip-spec-item">
+                  <span>Reflection</span>
+                  <strong>94% Crystal Specular</strong>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 

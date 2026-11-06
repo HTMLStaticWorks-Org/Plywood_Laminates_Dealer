@@ -626,6 +626,141 @@
       </div>
     </section>
 
+    <!-- Section 3.5: Interactive 4K Surface Theater Console -->
+    <section class="section section-theater" aria-labelledby="theater-heading">
+      <div class="container">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem">
+          <div>
+            <p class="eyebrow reveal">Live Surface Theater</p>
+            <h2 id="theater-heading" class="section-heading reveal">Surfaces in Dynamic Light & Form</h2>
+            <p class="reveal" style="margin-top:0.6rem;max-width:64ch;color:rgba(255,255,255,0.7)">
+              Select a 4K camera feed below to observe texture relief, light refraction, and fluted shadow angles captured directly inside our architectural lighting laboratory.
+            </p>
+          </div>
+          <button type="button" class="btn btn-primary reveal" data-modal-open="modal-enquiry">Request Live Video Swatch Consultation</button>
+        </div>
+
+        <div class="theater-console reveal">
+          <!-- Master Stage Player -->
+          <div class="theater-stage">
+            <div class="theater-stage-viewport">
+              <video class="theater-master-video" autoplay loop muted playsinline preload="auto">
+                <source src="assets/v/6789595-uhd_3840_2160_25fps.mp4" type="video/mp4">
+              </video>
+              <div class="theater-feed-pill">
+                <span class="pulse-dot"></span>
+                <span>4K UHD Master Feed</span>
+              </div>
+              <div class="theater-scene-hud">CH 01 · 3840x2160 · 25 FPS</div>
+            </div>
+
+            <!-- Master Player Controls Bar -->
+            <div class="theater-controls-bar">
+              <div class="theater-controls-left">
+                <button type="button" class="theater-control-btn" data-theater-play aria-label="Play / Pause video">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                </button>
+                <button type="button" class="theater-control-btn" data-theater-mute aria-label="Mute / Unmute audio">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+                </button>
+                <span class="theater-timecode">00:00 / 00:17</span>
+              </div>
+
+              <div class="theater-scene-title">
+                Scene 01: Panoramic Architectural Spatial Tone & Walnut Warmth
+              </div>
+
+              <div class="theater-controls-right">
+                <button type="button" class="theater-control-btn" data-theater-fullscreen aria-label="Toggle Fullscreen">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Multi-Channel Deck (Right) -->
+          <div class="channel-deck">
+            <div class="channel-deck-header">
+              <span class="channel-deck-title">Interactive Camera Feeds</span>
+              <span style="font-size:0.72rem;color:rgba(255,255,255,0.4)">Click to Switch</span>
+            </div>
+
+            <!-- Channel 1 -->
+            <button type="button" class="channel-card active"
+              data-video-src="assets/v/6789595-uhd_3840_2160_25fps.mp4"
+              data-video-title="Scene 01: Panoramic Architectural Spatial Tone & Walnut Warmth"
+              data-video-hud="CH 01 · 3840x2160 · 25 FPS">
+              <div class="channel-thumb-box">
+                <video class="channel-thumb-video" muted loop playsinline preload="metadata">
+                  <source src="assets/v/6789595-uhd_3840_2160_25fps.mp4" type="video/mp4">
+                </video>
+                <div class="channel-thumb-overlay">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+              </div>
+              <div class="channel-info">
+                <span class="channel-badge">Feed 01 · Ambience</span>
+                <strong class="channel-title">Spatial Interior Harmony</strong>
+                <div class="channel-meta">
+                  <span>00:17</span>
+                  <span>4K UHD</span>
+                  <span>Walnut & Marble</span>
+                </div>
+              </div>
+            </button>
+
+            <!-- Channel 2 -->
+            <button type="button" class="channel-card"
+              data-video-src="assets/v/7493222-uhd_4096_2160_25fps.mp4"
+              data-video-title="Scene 02: 4K Cinema Macro Texture & Light Diffusion"
+              data-video-hud="CH 02 · 4096x2160 · 25 FPS">
+              <div class="channel-thumb-box">
+                <video class="channel-thumb-video" muted loop playsinline preload="metadata">
+                  <source src="assets/v/7493222-uhd_4096_2160_25fps.mp4" type="video/mp4">
+                </video>
+                <div class="channel-thumb-overlay">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+              </div>
+              <div class="channel-info">
+                <span class="channel-badge">Feed 02 · 4K Macro</span>
+                <strong class="channel-title">Fluted Relief & Shadow Lines</strong>
+                <div class="channel-meta">
+                  <span>00:36</span>
+                  <span>DCI 4K</span>
+                  <span>Tactile Louvers</span>
+                </div>
+              </div>
+            </button>
+
+            <!-- Channel 3 -->
+            <button type="button" class="channel-card"
+              data-video-src="assets/v/6789566-uhd_3840_2160_25fps.mp4"
+              data-video-title="Scene 03: Full-Scale Turnkey Surface Execution & Craft"
+              data-video-hud="CH 03 · 3840x2160 · 25 FPS">
+              <div class="channel-thumb-box">
+                <video class="channel-thumb-video" muted loop playsinline preload="metadata">
+                  <source src="assets/v/6789566-uhd_3840_2160_25fps.mp4" type="video/mp4">
+                </video>
+                <div class="channel-thumb-overlay">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+              </div>
+              <div class="channel-info">
+                <span class="channel-badge">Feed 03 · Execution</span>
+                <strong class="channel-title">Seamless Fit-Out & Detailing</strong>
+                <div class="channel-meta">
+                  <span>00:29</span>
+                  <span>4K UHD</span>
+                  <span>Zero-Joint Edge</span>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Section 4: Signature Lookbooks & Digital Catalogues -->
     <section class="section" aria-labelledby="lookbooks-heading">
       <div class="container">

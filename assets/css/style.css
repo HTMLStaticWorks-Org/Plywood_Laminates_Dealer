@@ -2933,4 +2933,528 @@ h1, h2, h3, h4 {
     gap: 1.5rem !important;
   }
 }
+
+/* ==========================================================================
+   VIDEO LAYOUT 1 (Home Page 1): Ambient Canvas & Architectural Filmstrip
+   ========================================================================== */
+
+/* Hero ambient background video */
+.hero-bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.65;
+  transition: opacity 0.5s ease;
+  z-index: 0;
+}
+
+.hero-video-toggle {
+  position: absolute;
+  bottom: 24px;
+  right: 28px;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.95rem;
+  border-radius: 9999px;
+  background: color-mix(in srgb, var(--bg-elevated) 70%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+  color: var(--text-primary);
+  font-size: 0.76rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.hero-video-toggle:hover {
+  background: var(--bg-elevated);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.hero-video-toggle svg {
+  flex-shrink: 0;
+}
+
+/* Dedicated Section: Architectural Filmstrip */
+.section-filmstrip {
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.filmstrip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.filmstrip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.filmstrip-card {
+  position: relative;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.filmstrip-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.16);
+  border-color: var(--accent);
+}
+
+.filmstrip-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/10;
+  background: #000;
+  overflow: hidden;
+}
+
+.filmstrip-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.filmstrip-card:hover .filmstrip-video {
+  transform: scale(1.04);
+}
+
+.filmstrip-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  background: rgba(18, 16, 14, 0.75);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  z-index: 2;
+}
+
+.filmstrip-duration {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  padding: 0.25rem 0.55rem;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 0.7rem;
+  font-family: monospace;
+  letter-spacing: 0.05em;
+  z-index: 2;
+}
+
+.filmstrip-play-btn {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent) 85%, transparent);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: all 0.25s ease;
+  z-index: 2;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.filmstrip-card:hover .filmstrip-play-btn {
+  transform: scale(1.12);
+  opacity: 1;
+  background: var(--accent);
+}
+
+.filmstrip-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.filmstrip-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  line-height: 1.25;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.filmstrip-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.filmstrip-specs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.78rem;
+}
+
+.filmstrip-spec-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.filmstrip-spec-item span {
+  font-size: 0.66rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.filmstrip-spec-item strong {
+  font-size: 0.84rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+
+/* ==========================================================================
+   VIDEO LAYOUT 2 (Home Page 2): Interactive 4K Surface Theater Console
+   ========================================================================== */
+
+.section-theater {
+  background: #0d0c0b;
+  color: #f7f4ee;
+  position: relative;
+  overflow: hidden;
+  border-block: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.section-theater .eyebrow {
+  color: var(--accent-soft);
+}
+
+.section-theater .section-heading {
+  color: #fff;
+}
+
+.theater-console {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 2.5rem;
+}
+
+/* Master Player */
+.theater-stage {
+  position: relative;
+  background: #000;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+}
+
+.theater-stage-viewport {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #000;
+  overflow: hidden;
+}
+
+.theater-master-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.theater-feed-pill {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  z-index: 5;
+}
+
+.theater-feed-pill .pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 0 0 8px #ef4444;
+  animation: navPulse 1.8s infinite;
+}
+
+.theater-scene-hud {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 0.35rem 0.8rem;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 0.72rem;
+  color: var(--accent-soft);
+  font-family: monospace;
+  z-index: 5;
+}
+
+/* Master Player Controls Bar */
+.theater-controls-bar {
+  background: rgba(18, 16, 14, 0.95);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.theater-controls-left {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.theater-control-btn {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theater-control-btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.theater-timecode {
+  font-size: 0.78rem;
+  font-family: monospace;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.theater-scene-title {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 320px;
+}
+
+.theater-controls-right {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+/* Channel Deck (Right column) */
+.channel-deck {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.channel-deck-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.5rem;
+}
+
+.channel-deck-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent-soft);
+  font-weight: 600;
+}
+
+.channel-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: left;
+  width: 100%;
+}
+
+.channel-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateX(4px);
+}
+
+[dir='rtl'] .channel-card:hover {
+  transform: translateX(-4px);
+}
+
+.channel-card.active {
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px -4px rgba(184, 80, 66, 0.35);
+}
+
+.channel-thumb-box {
+  position: relative;
+  width: 110px;
+  height: 68px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.channel-thumb-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.channel-thumb-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  display: grid;
+  place-items: center;
+}
+
+.channel-card.active .channel-thumb-overlay {
+  background: transparent;
+}
+
+.channel-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex-grow: 1;
+}
+
+.channel-badge {
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+  font-weight: 600;
+}
+
+.channel-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.25;
+}
+
+.channel-meta {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* Responsive queries */
+@media (max-width: 1024px) {
+  .filmstrip-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .theater-console {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .channel-deck {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+  .channel-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .channel-thumb-box {
+    width: 100%;
+    height: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filmstrip-grid {
+    grid-template-columns: 1fr;
+  }
+  .channel-deck {
+    grid-template-columns: 1fr;
+  }
+  .channel-card {
+    flex-direction: row;
+    align-items: center;
+  }
+  .channel-thumb-box {
+    width: 110px;
+    height: 68px;
+  }
+  .theater-scene-title {
+    max-width: 180px;
+  }
 }
