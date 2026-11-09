@@ -4048,47 +4048,130 @@ h1, h2, h3, h4 {
    ========================================================================== */
 .comparison-grid-with-images {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
+  align-items: stretch;
 }
 
-.comp-card-luxury {
+.comparison-card-img {
   background: var(--bg-elevated);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 
-.comp-card-media {
+.comparison-card-img:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+
+.comparison-img-box {
+  position: relative;
   width: 100%;
-  height: 220px;
+  height: 280px;
   overflow: hidden;
+  background: var(--bg-secondary);
 }
 
-.comp-card-media img {
+.comparison-img-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  display: block;
+  transition: transform 0.6s ease;
 }
 
-.comp-card-luxury:hover .comp-card-media img {
+.comparison-card-img:hover .comparison-img-box img {
   transform: scale(1.04);
 }
 
-.comp-card-body {
+.comparison-tag {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: rgba(20, 18, 16, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #f7f4ee;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.85rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  pointer-events: none;
+}
+
+[dir='rtl'] .comparison-tag {
+  left: auto;
+  right: 1rem;
+}
+
+.comparison-card-body {
   padding: 1.75rem 1.5rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
-@media (max-width: 768px) {
+.comparison-card-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.comparison-card-body p,
+.comparison-card-body ul {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.comparison-card-body ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+
+.comparison-card-body ul li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.comparison-card-body ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+[dir='rtl'] .comparison-card-body ul li {
+  padding-left: 0;
+  padding-right: 1.25rem;
+}
+
+[dir='rtl'] .comparison-card-body ul li::before {
+  left: auto;
+  right: 0;
+}
+
+@media (max-width: 900px) {
   .comparison-grid-with-images {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .comparison-img-box {
+    height: 240px;
   }
 }
 
