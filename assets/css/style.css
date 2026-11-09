@@ -861,25 +861,25 @@ h1, h2, h3, h4 {
 /* ——— Modern Architectural Split Showcase Hero (Home 1) ——— */
 .hero-cinematic {
   position: relative;
-  min-height: calc(90vh - var(--nav-height));
-  min-height: calc(90dvh - var(--nav-height));
-  display: flex;
-  align-items: center;
   background: var(--bg-secondary);
   background-image: 
     radial-gradient(at 0% 0%, color-mix(in srgb, var(--accent) 8%, transparent) 0px, transparent 55%),
     radial-gradient(at 100% 100%, color-mix(in srgb, var(--accent) 5%, transparent) 0px, transparent 50%);
-  padding: 3.5rem 0 4rem;
-  overflow: hidden;
+  padding: clamp(2.5rem, 5vw, 4.5rem) clamp(1.75rem, 4.5vw, 4rem);
   border-bottom: 1px solid var(--border);
+  overflow: visible;
+  box-sizing: border-box;
 }
 
 .hero-container {
+  max-width: 1200px;
+  margin-inline: auto;
   display: grid;
-  grid-template-columns: 1.08fr 0.92fr;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   align-items: center;
-  gap: clamp(2rem, 4.5vw, 4.5rem);
+  gap: clamp(2rem, 3.5vw, 3.5rem);
   width: 100%;
+  box-sizing: border-box;
 }
 
 .hero-left-content {
@@ -887,6 +887,8 @@ h1, h2, h3, h4 {
   flex-direction: column;
   justify-content: center;
   z-index: 2;
+  min-width: 0;
+  max-width: 580px;
 }
 
 .hero-eyebrow-wrap {
@@ -924,8 +926,8 @@ h1, h2, h3, h4 {
 }
 
 .hero-left-content .display-heading {
-  font-size: clamp(2.35rem, 4.2vw, 3.8rem);
-  line-height: 1.12;
+  font-size: clamp(2.2rem, 3.8vw, 3.5rem);
+  line-height: 1.15;
   font-weight: 700;
   letter-spacing: -0.025em;
   color: var(--text-primary);
@@ -941,10 +943,10 @@ h1, h2, h3, h4 {
 }
 
 .hero-lead {
-  font-size: clamp(1rem, 1.25vw, 1.12rem);
+  font-size: clamp(0.96rem, 1.2vw, 1.08rem);
   color: var(--text-secondary);
   line-height: 1.68;
-  max-width: 54ch;
+  max-width: 52ch;
   margin-bottom: 2rem;
   text-shadow: none !important;
 }
@@ -954,22 +956,202 @@ h1, h2, h3, h4 {
   flex-wrap: wrap;
   align-items: center;
   gap: 1.15rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0;
 }
 
-/* Trust Badges Strip on Hero */
-.hero-trust-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+/* Right Showcase Cinema Card */
+.hero-right-showcase {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 500px;
+  justify-self: end;
+  min-width: 0;
+}
+
+.hero-cinema-card {
+  position: relative;
+  border-radius: 20px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-cinema-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 55px color-mix(in srgb, var(--accent) 15%, rgba(0, 0, 0, 0.12));
+}
+
+.cinema-media-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10.5;
+  overflow: hidden;
+  background: #111;
+}
+
+.cinema-media-frame .hero-bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  filter: brightness(1.08) contrast(1.05) saturate(1.1);
+  transition: opacity 0.5s ease;
+}
+
+.cinema-glass-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    transparent 35%,
+    transparent 60%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  pointer-events: none;
+}
+
+.cinema-badge-top {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 9999px;
+  background: rgba(15, 13, 11, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.cinema-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 6px #34d399;
+}
+
+.cinema-deck-bottom {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  right: 14px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 1rem;
-  padding-top: 1.75rem;
-  border-top: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+}
+
+.cinema-deck-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.deck-tag {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.deck-title {
+  font-size: 0.88rem;
+  color: #ffffff;
+  font-weight: 600;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.cinema-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 9999px;
+  background: rgba(20, 18, 16, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+
+.cinema-toggle-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.cinema-chips-strip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.15rem;
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border);
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.chips-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.chip-item {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Dedicated Trust Bar Across Bottom */
+.hero-trust-bar {
+  grid-column: 1 / -1;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  padding: 1.35rem 1.75rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  margin-top: 1.75rem;
+  box-sizing: border-box;
 }
 
 .trust-badge-item {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
+  min-width: 0;
 }
 
 .trust-icon-box {
@@ -1170,24 +1352,36 @@ h1, h2, h3, h4 {
   color: var(--text-primary);
 }
 
-@media (max-width: 991px) {
-  .hero-container {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-  .hero-cinematic {
-    padding: 2.5rem 0 3rem;
-  }
-  .hero-left-content {
-    text-align: left;
-  }
-  .hero-trust-grid {
-    grid-template-columns: 1fr;
-    gap: 1.1rem;
+@media (max-width: 1024px) {
+  .hero-trust-bar {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 991px) {
+  .hero-cinematic {
+    padding: 2.5rem 1.5rem 3rem;
+  }
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+  .hero-left-content {
+    max-width: 100%;
+    text-align: left;
+  }
+  .hero-right-showcase {
+    max-width: 100%;
+    justify-self: start;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-trust-bar {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
   .hero-actions {
     flex-direction: column;
     width: 100%;
