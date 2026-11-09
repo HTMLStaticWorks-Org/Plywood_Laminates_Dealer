@@ -1245,9 +1245,22 @@ h1, h2, h3, h4 {
   }
 }
 
+@media (min-width: 641px) and (max-width: 1024px) {
+  .product-range-grid .range-card:last-child {
+    grid-column: 1 / -1;
+    max-width: 520px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
 @media (max-width: 640px) {
   .product-range-grid {
     grid-template-columns: 1fr;
+  }
+  .product-range-grid .range-card:last-child {
+    grid-column: auto;
+    max-width: 100%;
   }
 }
 
@@ -1527,20 +1540,21 @@ h1, h2, h3, h4 {
 
 /* ——— Bulk pricing ——— */
 .pricing-horizontal {
-  display: flex;
-  gap: 1.25rem;
-  overflow-x: auto;
-  padding-bottom: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
 }
 
 .pricing-tier {
-  flex: 0 0 min(280px, 88vw);
-  padding: 2rem 1.75rem;
+  padding: 2.25rem 1.75rem 2rem;
   background: var(--bg-elevated);
   border: 1px solid var(--border);
+  border-radius: var(--radius);
   position: relative;
   display: flex;
   flex-direction: column;
+  width: 100%;
   transition: transform var(--transition), box-shadow var(--transition);
 }
 
@@ -1548,6 +1562,7 @@ h1, h2, h3, h4 {
   border-color: var(--accent);
   box-shadow: var(--shadow-lg);
   transform: scale(1.02);
+  z-index: 2;
 }
 
 .pricing-tier h3 {
@@ -2913,10 +2928,51 @@ h1, h2, h3, h4 {
 
   .split-hero {
     grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .split-hero-content {
+    padding: 3rem 1.5rem 2.25rem;
+  }
+
+  .split-hero-media {
+    height: 320px;
+    min-height: auto;
+  }
+
+  .split-hero-media img {
+    height: 100%;
+    min-height: auto;
+    object-fit: cover;
   }
 
   .dorby-hero {
     grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .dorby-hero-left {
+    padding: 3rem 1.5rem 2.25rem;
+  }
+
+  .dorby-hero-right {
+    min-height: auto !important;
+    height: 380px !important;
+    max-height: 400px !important;
+  }
+
+  .dorby-hero-right img {
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .pricing-horizontal {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+
+  .pricing-tier.featured {
+    transform: none !important;
   }
 
   .space-visualizer {
@@ -2965,14 +3021,18 @@ h1, h2, h3, h4 {
     grid-row: span 1;
   }
 
+  /* Zero overlapping for all Dorby 5 categories on 1024px & 768px tablet */
   .grid-laminates-dorby {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: auto !important;
+    gap: 1rem !important;
   }
 
   .grid-laminates-dorby .card-hero-door {
-    grid-column: span 2;
-    height: 320px;
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+    height: 320px !important;
   }
 
   .grid-laminates-dorby .card-synchro,
@@ -2982,21 +3042,24 @@ h1, h2, h3, h4 {
   .grid-laminates-dorby .card-solid,
   .grid-laminates-dorby .card-stone,
   .grid-laminates-dorby .card-wooden {
-    grid-column: auto;
-    grid-row: auto;
-    height: 180px;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    height: 180px !important;
   }
 
   .grid-edge-dorby,
   .grid-acrylic-dorby {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: auto !important;
+    gap: 1rem !important;
   }
 
   .grid-edge-dorby .card-edge-hero,
   .grid-acrylic-dorby .card-acrylic-hero {
-    grid-column: span 2;
-    height: 280px;
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+    height: 280px !important;
   }
 
   .grid-edge-dorby .card-edge-leather,
@@ -3007,29 +3070,33 @@ h1, h2, h3, h4 {
   .grid-acrylic-dorby .card-acrylic-mirror,
   .grid-acrylic-dorby .card-acrylic-sparkle,
   .grid-acrylic-dorby .card-acrylic-stone {
-    grid-column: auto;
-    grid-row: auto;
-    height: 170px;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    height: 180px !important;
   }
 
   .grid-asa-dorby,
   .grid-plywood-dorby {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: auto !important;
+    gap: 1rem !important;
   }
 
   .grid-asa-dorby .card-asa-hero,
   .grid-plywood-dorby .card-ply-hero {
-    grid-column: 1;
-    height: 280px;
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+    height: 280px !important;
   }
 
   .grid-asa-dorby .card-asa-metallic,
   .grid-asa-dorby .card-asa-texture,
   .grid-plywood-dorby .card-ply-edge,
   .grid-plywood-dorby .card-ply-pro {
-    grid-column: 1;
-    height: 170px;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    height: 180px !important;
   }
 }
 
@@ -3133,18 +3200,48 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 640px) {
+  .pricing-horizontal {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .benefits-grid-4 {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .dorby-hero-right {
+    height: 280px !important;
+    max-height: 300px !important;
+  }
+
   .grid-laminates-dorby,
   .grid-edge-dorby,
-  .grid-acrylic-dorby {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
+  .grid-acrylic-dorby,
+  .grid-asa-dorby,
+  .grid-plywood-dorby {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+    gap: 0.85rem !important;
+  }
+
+  .grid-laminates-dorby .dorby-card,
+  .grid-edge-dorby .dorby-card,
+  .grid-acrylic-dorby .dorby-card,
+  .grid-asa-dorby .dorby-card,
+  .grid-plywood-dorby .dorby-card {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    height: 190px !important;
   }
 
   .grid-laminates-dorby .card-hero-door,
   .grid-edge-dorby .card-edge-hero,
-  .grid-acrylic-dorby .card-acrylic-hero {
-    grid-column: span 2;
-    height: 240px;
+  .grid-acrylic-dorby .card-acrylic-hero,
+  .grid-asa-dorby .card-asa-hero,
+  .grid-plywood-dorby .card-ply-hero {
+    height: 240px !important;
   }
 
   .dorby-card-tag {
@@ -3695,9 +3792,22 @@ h1, h2, h3, h4 {
   }
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+  .filmstrip-grid .filmstrip-card:last-child {
+    grid-column: 1 / -1;
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .filmstrip-grid {
     grid-template-columns: 1fr;
+  }
+  .filmstrip-grid .filmstrip-card:last-child {
+    grid-column: auto;
+    max-width: 100%;
   }
   .channel-deck {
     grid-template-columns: 1fr;
