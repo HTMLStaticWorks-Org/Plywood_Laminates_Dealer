@@ -16,15 +16,13 @@
   <header class="site-header" role="banner">
     <div class="nav-inner">
       <a href="index.html" class="brand-logo" aria-label="STRATA Ply and Laminates Home">
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="64" height="64" rx="14" fill="currentColor" opacity="0.12" />
-          <path d="M14 46 L32 18 L50 46" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-          <line x1="14" y1="46" x2="50" y2="46" stroke="var(--text-primary)" stroke-width="2.5" stroke-linecap="round" />
-          <circle cx="32" cy="14" r="3.5" fill="var(--accent)" />
+        <svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true">
+          <polygon points="10,50 32,14 54,50" fill="none" stroke="currentColor" stroke-width="3" />
+          <polygon points="20,45 32,24 44,45" fill="var(--accent)" opacity="0.8" />
         </svg>
         <div class="brand-text">
           <span class="brand-name">STRATA</span>
-          <span class="brand-descriptor">SURFACE ATELIER</span>
+          <span class="brand-descriptor">PLY &amp; LAMINATES</span>
         </div>
       </a>
 
@@ -137,21 +135,40 @@
     <div class="drawer-backdrop"></div>
     <div class="drawer-panel">
       <div class="drawer-header">
-        <div class="brand-text">
-          <span class="brand-name">STRATA</span>
-          <span class="brand-descriptor">SURFACE ATELIER</span>
-        </div>
+        <a href="index.html" class="brand-logo">
+          <svg viewBox="0 0 64 64" width="32" height="32" aria-hidden="true">
+            <polygon points="10,50 32,14 54,50" fill="none" stroke="currentColor" stroke-width="3" />
+            <polygon points="20,45 32,24 44,45" fill="var(--accent)" opacity="0.8" />
+          </svg>
+          <div class="brand-text">
+            <span class="brand-name">STRATA</span>
+            <span class="brand-descriptor">PLY &amp; LAMINATES</span>
+          </div>
+        </a>
         <button type="button" class="drawer-close" aria-label="Close menu">&times;</button>
       </div>
 
       <nav class="drawer-nav">
         <a href="index.html" data-nav="home">Home (Classic)</a>
         <a href="home-2.html" data-nav="home-2">Home 2 (Dorby Studio)</a>
-        <a href="products.html" data-nav="products">Surfaces & Decors</a>
-        <a href="services.html" data-nav="services">Services & SLAs</a>
+        <div class="drawer-dropdown">
+          <button type="button" class="drawer-dropdown-btn" aria-expanded="false">
+            <span>Surfaces &amp; Decors</span>
+            <svg class="drawer-dropdown-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-9"/></svg>
+          </button>
+          <div class="drawer-dropdown-content">
+            <a href="products.html">✦ All Products &amp; Finishes</a>
+            <a href="products.html?cat=laminates">· Dorby Laminates (0.8–1.25mm)</a>
+            <a href="products.html?cat=edge">· Dorby Edge Bandings</a>
+            <a href="products.html?cat=asa">· ASA Weatherproof Panels</a>
+            <a href="products.html?cat=acrylic">· 6H Acrylic Mirror &amp; Matte</a>
+            <a href="products.html?cat=plywood">· IS:710 Marine Calibrated Ply</a>
+          </div>
+        </div>
+        <a href="services.html" data-nav="services">Services &amp; SLAs</a>
         <a href="about.html" data-nav="about">About Atelier</a>
         <a href="bulk-pricing.html" data-nav="pricing">Bulk Pricing</a>
-        <a href="contact.html" data-nav="contact">Contact & Studio</a>
+        <a href="contact.html" data-nav="contact">Contact &amp; Studio</a>
       </nav>
 
       <div class="drawer-surfaces-preview">
@@ -262,7 +279,7 @@
           <!-- Service 3 -->
           <article class="service-card reveal">
             <div class="service-card-media">
-              <img src="https://images.unsplash.com/photo-1533090161762-e6ffed1ab713?auto=format&fit=crop&w=800&q=80"
+              <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
                 alt="Calibrated plywood stack for CNC and modular manufacturing" loading="lazy">
             </div>
             <div class="service-card-body">
@@ -433,12 +450,10 @@
         <div class="footer-brand">
           <a href="index.html" class="brand-logo">
             <svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true">
-              <rect width="64" height="64" rx="12" fill="currentColor" opacity="0.15" />
-              <path d="M12 44 L32 18 L52 44" stroke="var(--accent)" stroke-width="3" />
-              <line x1="12" y1="44" x2="52" y2="44" stroke="currentColor" stroke-width="2" />
+              <polygon points="10,50 32,14 54,50" fill="none" stroke="currentColor" stroke-width="3" />
+              <polygon points="20,45 32,24 44,45" fill="var(--accent)" opacity="0.8" />
             </svg>
-            <div class="brand-text"><span class="brand-name">STRATA</span><span class="brand-descriptor">PLY &
-                LAMINATES</span></div>
+            <div class="brand-text"><span class="brand-name">STRATA</span><span class="brand-descriptor">PLY &amp; LAMINATES</span></div>
           </a>
           <p>Premium plywood, laminates, acrylic panels, and edge bands — architectural surface solutions across India.</p>
           <div class="social-row">
@@ -488,7 +503,18 @@
           </ul>
         </div>
       </div>
-      <p class="footer-bottom">© 2026 STRATA PLY & LAMINATES. Inspired by leading architectural surface decor brands.</p>
+      <div class="newsletter-box">
+        <div>
+          <h3 style="font-size:1.35rem">Stay on Top of New Arrivals</h3>
+          <p style="font-size:0.9rem;color:var(--text-muted);margin-top:0.35rem">Trade newsletter — new lookbooks, synchronized shades, and bulk offers.</p>
+        </div>
+        <form class="newsletter-form" data-newsletter aria-label="Newsletter">
+          <input type="email" placeholder="Email address" required aria-label="Email">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p class="newsletter-msg" style="width:100%;font-size:0.85rem;margin-top:0.5rem"></p>
+      </div>
+      <p class="footer-bottom">© 2026 STRATA PLY &amp; LAMINATES. Inspired by leading architectural surface decor brands.</p>
     </div>
   </footer>
 

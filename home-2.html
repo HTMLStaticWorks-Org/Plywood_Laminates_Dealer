@@ -24,7 +24,7 @@
         </svg>
         <div class="brand-text">
           <span class="brand-name">STRATA</span>
-          <span class="brand-descriptor">SURFACE ATELIER</span>
+          <span class="brand-descriptor">PLY & LAMINATES</span>
         </div>
       </a>
 
@@ -139,7 +139,7 @@
       <div class="drawer-header">
         <div class="brand-text">
           <span class="brand-name">STRATA</span>
-          <span class="brand-descriptor">SURFACE ATELIER</span>
+          <span class="brand-descriptor">PLY & LAMINATES</span>
         </div>
         <button type="button" class="drawer-close" aria-label="Close menu">&times;</button>
       </div>
@@ -147,7 +147,20 @@
       <nav class="drawer-nav">
         <a href="index.html" data-nav="home">Home (Classic)</a>
         <a href="home-2.html" data-nav="home-2">Home 2 (Dorby Studio)</a>
-        <a href="products.html" data-nav="products">Surfaces & Decors</a>
+        <div class="drawer-dropdown">
+          <button type="button" class="drawer-dropdown-btn" aria-expanded="false">
+            <span>Surfaces & Decors</span>
+            <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="drawer-dropdown-menu">
+            <a href="products.html?cat=all" class="sub-link">All Surface Catalog</a>
+            <a href="products.html?cat=laminates" class="sub-link">Decorative Laminates</a>
+            <a href="products.html?cat=plywood" class="sub-link">710 Marine & Calibrated Plywood</a>
+            <a href="products.html?cat=acrylic" class="sub-link">Vibron 6H Acrylics</a>
+            <a href="products.html?cat=edge" class="sub-link">Matching Edge Banding</a>
+            <a href="products.html?cat=asa" class="sub-link">Architectural ASA Sheets</a>
+          </div>
+        </div>
         <a href="services.html" data-nav="services">Services & SLAs</a>
         <a href="about.html" data-nav="about">About Atelier</a>
         <a href="bulk-pricing.html" data-nav="pricing">Bulk Pricing</a>
@@ -264,310 +277,105 @@
       </div>
     </div>
 
-    <!-- Section 2: Complete Dorby 5-Category Surface Showcase (Laminates, Edge Bands, ASA, Acrylic, Plywood) -->
-    <section class="section dorby-collection-section" aria-labelledby="dorby-decor-heading">
+    <!-- Section 2: Architectural Surface Atelier & Material Lab (Exclusive to Home 2) -->
+    <section class="section" aria-labelledby="material-lab-heading">
       <div class="container">
         <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem">
           <div>
-            <p class="eyebrow reveal">Surface Ecosystem</p>
-            <h2 id="dorby-decor-heading" class="section-heading reveal">The Complete Surface Compendium</h2>
+            <p class="eyebrow reveal">Architectural Material Lab</p>
+            <h2 id="material-lab-heading" class="section-heading reveal">Tactile Exploration & Substrate Precision</h2>
             <p class="reveal" style="margin-top:0.6rem;color:var(--text-secondary);max-width:64ch">
-              Explore all 5 core surface & panel collections — precision decorative laminates, matching edge bands, versatile ASA sheets, 6H acrylics, and certified calibrated plywood.
+              Engineered exclusively for high-specification joinery — cross-matching calibrated core substrates with deep synchronized textures and zero-glare acrylic veneers.
             </p>
           </div>
-          <button type="button" class="btn btn-outline reveal" data-modal-open="modal-enquiry">Download Swatch Catalogue</button>
+          <button type="button" class="btn btn-outline reveal" data-modal-open="modal-enquiry">Request Specifier Kit</button>
         </div>
 
-        <!-- Filter Tabs for Category Navigation -->
-        <div class="category-nav-bar reveal" role="tablist" aria-label="Dorby Surface Categories">
-          <button type="button" class="cat-tab-btn active" data-cat-target="all">All Collections</button>
-          <button type="button" class="cat-tab-btn" data-cat-target="laminates">Laminates (8 Styles)</button>
-          <button type="button" class="cat-tab-btn" data-cat-target="edge">Dorby Edge (5 Finishes)</button>
-          <button type="button" class="cat-tab-btn" data-cat-target="asa">ASA Sheet (3 Variants)</button>
-          <button type="button" class="cat-tab-btn" data-cat-target="acrylic">Acrylic (5 Finishes)</button>
-          <button type="button" class="cat-tab-btn" data-cat-target="plywood">Plywood (3 ISI Grades)</button>
-        </div>
-
-        <!-- 1. LAMINATES BLOCK -->
-        <div class="dorby-gallery-block reveal" data-category="laminates">
-          <div class="dorby-gallery-header">
-            <h3>Laminates Collection</h3>
-          </div>
-          <div class="grid-laminates-dorby">
-            <!-- 1.1 Dorby Pro Hero Door -->
-            <article class="dorby-card card-hero-door">
-              <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1000&q=80"
-                alt="Dorby Pro synchronized architectural door with vertical fluting" loading="lazy">
-              <div class="dorby-card-tag">
-                <span class="label">Dorby Pro</span>
+        <div class="atelier-quad-grid">
+          <!-- Quadrant 1 -->
+          <article class="atelier-quad-card reveal">
+            <div class="atelier-quad-media">
+              <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80"
+                alt="Synchronized architectural woodgrain veneer panels" loading="lazy">
+              <span class="atelier-quad-badge">Tactile Grain</span>
+            </div>
+            <div class="atelier-quad-body">
+              <span class="atelier-quad-num">01</span>
+              <h3 class="atelier-quad-title">Synchronized Woodgrains</h3>
+              <p class="atelier-quad-desc">
+                Registered pore embossing perfectly aligned with genuine oak, teak, and walnut timber grain visuals. Available in 0.8mm to 1.25mm luxury thicknesses with scratch-resistant melamine overlay.
+              </p>
+              <div class="atelier-quad-tags">
+                <span class="atelier-tag">Deep Pore Sync</span>
+                <span class="atelier-tag">E0 Core Safe</span>
+                <span class="atelier-tag">250+ Finishes</span>
               </div>
-            </article>
+            </div>
+          </article>
 
-            <!-- 1.2 Sassy and Synchro -->
-            <article class="dorby-card card-synchro">
-              <img src="https://tse2.mm.bing.net/th/id/OIP.eV8xop98na0XOsHx5g_SSgHaC9?r=0&w=600&h=240&rs=1&pid=ImgDetMain&o=7&rm=3"
-                alt="Sassy and Synchro synchronized wood grain texture" loading="lazy">
-              <div class="dorby-card-tag">
-                <span class="label">Sassy and Synchro</span>
-              </div>
-            </article>
-
-            <!-- 1.3 Fluted Laminates -->
-            <article class="dorby-card card-fluted">
-              <img src="https://images.unsplash.com/photo-1637822412454-085098b4c8c0?auto=format&fit=crop&w=800&q=80"
-                alt="Fluted architectural laminates and vertical wall slats" loading="lazy">
-              <div class="dorby-card-tag">
-                <span class="label">Fluted Laminates</span>
-              </div>
-            </article>
-
-            <!-- 1.4 Etched and Engraved (1.25 mm) -->
-            <article class="dorby-card card-etched">
-              <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&q=80"
-                alt="Etched and engraved luxury architectural wall and cabinetry paneling" loading="lazy">
-              <div class="dorby-card-tag">
-                <span class="label">Etched and Engraved (1.25 mm)</span>
-              </div>
-            </article>
-
-            <!-- 1.5 Canvas Collection -->
-            <article class="dorby-card card-canvas">
-              <img src="https://images.unsplash.com/photo-1618220048045-10a6dbdf83e0?auto=format&fit=crop&w=800&q=80"
-                alt="Canvas Collection designer textured credenza and decorative surface" loading="lazy">
-              <div class="dorby-card-tag">
-                <span class="label">Canvas Collection</span>
-              </div>
-            </article>
-
-            <!-- 1.6 Solid Laminates -->
-            <article class="dorby-card card-solid">
-              <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80"
-                alt="Solid laminates in matte finish luxury cabinetry" loading="lazy">
-              <div class="dorby-card-tag">
-                <span class="label">Solid Laminates</span>
-              </div>
-            </article>
-
-            <!-- 1.7 Stone Laminates -->
-            <article class="dorby-card card-stone">
-              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80"
-                alt="Stone laminates Italian marble texture" loading="lazy">
-              <div class="dorby-card-tag">
-                <span class="label">Stone Laminates</span>
-              </div>
-            </article>
-
-            <!-- 1.8 Wooden Laminates -->
-            <article class="dorby-card card-wooden">
-              <img src="https://www.duroply.in/blog/wp-content/uploads/2021/08/Duroply-Feature-Images-and-Blog-Images.jpg"
-                alt="Wooden laminates warm timber texture" loading="lazy">
-              <div class="dorby-card-tag">
-                <span class="label">Wooden Laminates</span>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <!-- 2. DORBY EDGE BLOCK -->
-        <div class="dorby-gallery-block reveal" data-category="edge">
-          <div class="dorby-gallery-header">
-            <h3>Dorby Edge</h3>
-          </div>
-          <div class="grid-edge-dorby">
-            <!-- 2.1 Hero Shutter High Gloss -->
-            <article class="dorby-card card-edge-hero">
+          <!-- Quadrant 2 -->
+          <article class="atelier-quad-card reveal">
+            <div class="atelier-quad-media">
               <img src="https://images.unsplash.com/photo-1588854337236-6889d631faa8?auto=format&fit=crop&w=900&q=80"
-                alt="High gloss seamless edge-banded corner shutter" loading="lazy">
-              <div class="dorby-card-tag">
-                <span class="label">High Gloss</span>
+                alt="Optical high-gloss and super matte acrylic kitchen shutters" loading="lazy">
+              <span class="atelier-quad-badge">Vibron 6H</span>
+            </div>
+            <div class="atelier-quad-body">
+              <span class="atelier-quad-num">02</span>
+              <h3 class="atelier-quad-title">6H Nano-Shield Acrylics</h3>
+              <p class="atelier-quad-desc">
+                High-clarity cast acrylic layers with German hard-coating technology. Provides glass-like mirror reflections, anti-fingerprint silky matte finishes, and 6H pencil scratch resistance.
+              </p>
+              <div class="atelier-quad-tags">
+                <span class="atelier-tag">6H Hard Coat</span>
+                <span class="atelier-tag">Zero Distortion</span>
+                <span class="atelier-tag">Anti-Yellowing</span>
               </div>
-            </article>
+            </div>
+          </article>
 
-            <!-- 2.2 Leather -->
-            <article class="dorby-card card-edge-leather">
-              <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=700&q=80"
-                alt="Leather finish luxury drawer interior edge lining" loading="lazy">
-              <div class="dorby-card-tag">
-                <span class="label">Leather</span>
+          <!-- Quadrant 3 -->
+          <article class="atelier-quad-card reveal">
+            <div class="atelier-quad-media">
+              <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80"
+                alt="Calibrated structural plywood core sheets stacked in climate warehouse" loading="lazy">
+              <span class="atelier-quad-badge">IS:710 Marine</span>
+            </div>
+            <div class="atelier-quad-body">
+              <span class="atelier-quad-num">03</span>
+              <h3 class="atelier-quad-title">Calibrated Core Plywood</h3>
+              <p class="atelier-quad-desc">
+                Boiling waterproof marine panels 4x pressed through precision double-sanding drums. Guaranteed ±0.2mm thickness tolerance with zero core voids for automated CNC edge-banding.
+              </p>
+              <div class="atelier-quad-tags">
+                <span class="atelier-tag">4x Pressed</span>
+                <span class="atelier-tag">Zero Core Voids</span>
+                <span class="atelier-tag">72hr Boil Test</span>
               </div>
-            </article>
+            </div>
+          </article>
 
-            <!-- 2.3 Super Matte -->
-            <article class="dorby-card card-edge-matte">
-              <img src="https://www.tilelook.com/system/tile_picture/resource/27170543/d3d_default_TIVEDEN_CAOBA_20X20_06__R10_3.jpg"
-                alt="Super matte clean edge profile for minimalist shutters" loading="lazy">
-              <div class="dorby-card-tag">
-                <span class="label">Super Matte</span>
+          <!-- Quadrant 4 -->
+          <article class="atelier-quad-card reveal">
+            <div class="atelier-quad-media">
+              <img src="https://images.unsplash.com/photo-1637822412454-085098b4c8c0?auto=format&fit=crop&w=900&q=80"
+                alt="Fluted louvers and architectural ASA wall cladding panels" loading="lazy">
+              <span class="atelier-quad-badge">ASA & Louvers</span>
+            </div>
+            <div class="atelier-quad-body">
+              <span class="atelier-quad-num">04</span>
+              <h3 class="atelier-quad-title">Architectural ASA Louvers</h3>
+              <p class="atelier-quad-desc">
+                UV-weatherable co-extruded acrylic sheets and 3D fluted wall profiles for feature partitions, luxury ceilings, and damp-prone bathroom vanities. 100% moisture impervious.
+              </p>
+              <div class="atelier-quad-tags">
+                <span class="atelier-tag">UV Weatherable</span>
+                <span class="atelier-tag">3D Fluting</span>
+                <span class="atelier-tag">Waterproof</span>
               </div>
-            </article>
-
-            <!-- 2.4 Wooden Texture -->
-            <article class="dorby-card card-edge-wood">
-              <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=80"
-                alt="Wooden texture edge band matching tabletop grain" loading="lazy">
-              <div class="dorby-card-tag">
-                <span class="label">Wooden Texture</span>
-              </div>
-            </article>
-
-            <!-- 2.5 Digital -->
-            <article class="dorby-card card-edge-digital">
-              <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=700&q=80"
-                alt="Digital printed marble and stone edge band on countertop" loading="lazy">
-              <div class="dorby-card-tag">
-                <span class="label">Digital</span>
-              </div>
-            </article>
-          </div>
+            </div>
+          </article>
         </div>
-
-        <!-- 3. ASA SHEET BLOCK -->
-        <div class="dorby-gallery-block reveal" data-category="asa">
-          <div class="dorby-gallery-header">
-            <h3>ASA Sheet</h3>
-          </div>
-          <div class="grid-asa-dorby">
-            <!-- 3.1 Hero Solid Kids Bedroom Architecture -->
-            <article class="dorby-card card-asa-hero">
-              <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=900&q=80"
-                alt="Solid ASA sheets applied to olive green bunk bed and study archway" loading="lazy">
-              <div class="dorby-card-tag">
-                <span class="label">Solid</span>
-              </div>
-            </article>
-
-            <!-- 3.2 Metallic -->
-            <article class="dorby-card card-asa-metallic">
-              <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=700&q=80"
-                alt="Metallic layered ASA sheets in copper, teal, and slate" loading="lazy">
-              <div class="dorby-card-tag">
-                <span class="label">Metallic</span>
-              </div>
-            </article>
-
-            <!-- 3.3 Texture -->
-            <article class="dorby-card card-asa-texture">
-              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80"
-                alt="Textured ribbed curved ASA paneling on modular sideboard" loading="lazy">
-              <div class="dorby-card-tag">
-                <span class="label">Texture</span>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <!-- 4. ACRYLIC BLOCK -->
-        <div class="dorby-gallery-block reveal" data-category="acrylic">
-          <div class="dorby-gallery-header">
-            <h3>Acrylic</h3>
-          </div>
-          <div class="grid-acrylic-dorby">
-            <!-- 4.1 Hero High Gloss Sideboard -->
-            <article class="dorby-card card-acrylic-hero">
-              <img src="https://images.unsplash.com/photo-1588854337236-6889d631faa8?auto=format&fit=crop&w=900&q=80"
-                alt="High gloss 6H acrylic floating console and modular drawers" loading="lazy">
-              <div class="dorby-card-tag">
-                <span class="label">High Gloss</span>
-              </div>
-            </article>
-
-            <!-- 4.2 Matte -->
-            <article class="dorby-card card-acrylic-matte">
-              <img src="https://images.unsplash.com/photo-1558997519-83ea9252def8?auto=format&fit=crop&w=700&q=80"
-                alt="Matte cashmere acrylic wardrobe sliding shutters" loading="lazy">
-              <div class="dorby-card-tag">
-                <span class="label">Matte</span>
-              </div>
-            </article>
-
-            <!-- 4.3 Mirror -->
-            <article class="dorby-card card-acrylic-mirror">
-              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=700&q=80"
-                alt="Mirror reflective luxury display and glass bar unit" loading="lazy">
-              <div class="dorby-card-tag">
-                <span class="label">Mirror</span>
-              </div>
-            </article>
-
-            <!-- 4.4 Sparkle -->
-            <article class="dorby-card card-acrylic-sparkle">
-              <img src="https://images.unsplash.com/photo-1615874959477-df969625fbf0?auto=format&fit=crop&w=700&q=80"
-                alt="Sparkle finish champagne textured kitchen storage drawers" loading="lazy">
-              <div class="dorby-card-tag">
-                <span class="label">Sparkle</span>
-              </div>
-            </article>
-
-            <!-- 4.5 Stone -->
-            <article class="dorby-card card-acrylic-stone">
-              <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=700&q=80"
-                alt="Stone texture acrylic architectural console cabinet" loading="lazy">
-              <div class="dorby-card-tag">
-                <span class="label">Stone</span>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <!-- 5. PLYWOOD BLOCK -->
-        <div class="dorby-gallery-block reveal" data-category="plywood">
-          <div class="dorby-gallery-header">
-            <h3>Plywood</h3>
-          </div>
-          <div class="grid-plywood-dorby">
-            <!-- 5.1 Hero 710 Plywood with Green Seal -->
-            <article class="dorby-card card-ply-hero">
-              <div class="plywood-board-visual">
-                <img src="https://images.unsplash.com/photo-1533090161762-e6ffed1ab713?auto=format&fit=crop&w=900&q=80"
-                  alt="710 Marine Grade BWP Calibrated Plywood Board" loading="lazy">
-                <div class="plywood-stamp-seal">
-                  <div class="seal-circle seal-green">
-                    <span>IS:710<br>MARINE<br>710</span>
-                  </div>
-                  <span class="seal-brand-sub">DORBY 710 MARINE</span>
-                </div>
-              </div>
-              <div class="dorby-card-tag">
-                <span class="label">710 Plywood</span>
-              </div>
-            </article>
-
-            <!-- 5.2 Edge Plywood with Blue Seal -->
-            <article class="dorby-card card-ply-edge">
-              <div class="plywood-board-visual">
-                <img src="https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?auto=format&fit=crop&w=700&q=80"
-                  alt="Edge Plywood Calibrated Core Sheet" loading="lazy">
-                <div class="plywood-stamp-seal">
-                  <div class="seal-circle seal-blue">
-                    <span>IS:303<br>EDGE<br>BWR</span>
-                  </div>
-                  <span class="seal-brand-sub">DORBY EDGE</span>
-                </div>
-              </div>
-              <div class="dorby-card-tag">
-                <span class="label">Edge Plywood</span>
-              </div>
-            </article>
-
-            <!-- 5.3 Pro Plywood with Red Seal -->
-            <article class="dorby-card card-ply-pro">
-              <div class="plywood-board-visual">
-                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=700&q=80"
-                  alt="Pro Plywood High Density Gurjan Core Board" loading="lazy">
-                <div class="plywood-stamp-seal">
-                  <div class="seal-circle seal-red">
-                    <span>IS:710<br>PRO<br>CORE</span>
-                  </div>
-                  <span class="seal-brand-sub">DORBY PRO</span>
-                </div>
-              </div>
-              <div class="dorby-card-tag">
-                <span class="label">Pro Plywood</span>
-              </div>
-            </article>
-          </div>
-        </div>
-
       </div>
     </section>
 
@@ -804,7 +612,7 @@
 
           <article class="lookbook-card reveal">
             <div class="lookbook-cover">
-              <img src="https://images.unsplash.com/photo-1615874959477-df969625fbf0?auto=format&fit=crop&w=700&q=80"
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80"
                 alt="Vibron and Vesta acrylic and ASA surface swatch box" loading="lazy">
             </div>
             <div class="lookbook-body">
@@ -864,12 +672,10 @@
         <div class="footer-brand">
           <a href="index.html" class="brand-logo">
             <svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true">
-              <rect width="64" height="64" rx="12" fill="currentColor" opacity="0.15" />
-              <path d="M12 44 L32 18 L52 44" stroke="var(--accent)" stroke-width="3" />
-              <line x1="12" y1="44" x2="52" y2="44" stroke="currentColor" stroke-width="2" />
+              <polygon points="10,50 32,14 54,50" fill="none" stroke="currentColor" stroke-width="3" />
+              <polygon points="20,45 32,24 44,45" fill="var(--accent)" opacity="0.8" />
             </svg>
-            <div class="brand-text"><span class="brand-name">STRATA</span><span class="brand-descriptor">PLY &
-                LAMINATES</span></div>
+            <div class="brand-text"><span class="brand-name">STRATA</span><span class="brand-descriptor">PLY &amp; LAMINATES</span></div>
           </a>
           <p>Premium plywood, laminates, acrylic panels, and edge bands — architectural surface solutions across India.</p>
           <div class="social-row">

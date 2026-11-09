@@ -44,9 +44,16 @@
 
   function toggleRTL() {
     const isRtl = document.documentElement.getAttribute('dir') === 'rtl';
+    const drawer = document.getElementById('mobile-drawer');
+    if (drawer) drawer.style.display = 'none'; // prevent transition flash across screen
     document.documentElement.setAttribute('dir', isRtl ? 'ltr' : 'rtl');
     localStorage.setItem(STORAGE_RTL, isRtl ? 'ltr' : 'rtl');
     updateRTLLabel();
+    if (drawer) {
+      requestAnimationFrame(() => {
+        drawer.style.display = '';
+      });
+    }
   }
 
   function updateRTLLabel() {
@@ -102,7 +109,24 @@
     });
     drawer.querySelector('.drawer-backdrop')?.addEventListener('click', close);
     drawer.querySelector('.drawer-close')?.addEventListener('click', close);
-    drawer.querySelectorAll('a').forEach((a) => a.addEventListener('click', close));
+
+    // Support expandable dropdowns inside drawer
+    drawer.querySelectorAll('.drawer-dropdown-btn').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const parent = btn.closest('.drawer-dropdown');
+        if (parent) {
+          const isOpen = parent.classList.toggle('open');
+          btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        }
+      });
+    });
+
+    // Close on regular link click, but not on dropdown toggle buttons
+    drawer.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', close);
+    });
   }
 
   /* ——— Scroll reveal ——— */
@@ -622,6 +646,39 @@
     });
   }
 
+  /* ——— Back to top floating button ——— */
+  function initBackToTop() {
+    if (document.querySelector('.back-to-top')) return;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'back-to-top';
+    btn.setAttribute('aria-label', 'Back to top');
+    btn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>`;
+    document.body.appendChild(btn);
+
+    const onScroll = () => {
+      btn.classList.toggle('visible', window.scrollY > 300);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    onScroll();
+  }
+
+  /* ——— FAQ Accordion ——— */
+  function initFAQ() {
+    document.querySelectorAll('.faq-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const card = btn.closest('.faq-card');
+        if (!card) return;
+        const isOpen = card.classList.contains('open');
+        card.classList.toggle('open', !isOpen);
+        btn.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+      });
+    });
+  }
+
   /* ——— Init ——— */
   document.querySelectorAll('[data-toggle-theme]').forEach((btn) => {
     btn.addEventListener('click', toggleTheme);
@@ -634,6 +691,8 @@
   initRTL();
   initNavbar();
   initMobileNav();
+  initBackToTop();
+  initFAQ();
   initReveal();
   initModals();
   initGoalSelector();

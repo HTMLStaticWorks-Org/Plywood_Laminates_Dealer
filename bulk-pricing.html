@@ -13,15 +13,13 @@
   <header class="site-header" role="banner">
     <div class="nav-inner">
       <a href="index.html" class="brand-logo" aria-label="STRATA Ply and Laminates Home">
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="64" height="64" rx="14" fill="currentColor" opacity="0.12" />
-          <path d="M14 46 L32 18 L50 46" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-          <line x1="14" y1="46" x2="50" y2="46" stroke="var(--text-primary)" stroke-width="2.5" stroke-linecap="round" />
-          <circle cx="32" cy="14" r="3.5" fill="var(--accent)" />
+        <svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true">
+          <polygon points="10,50 32,14 54,50" fill="none" stroke="currentColor" stroke-width="3" />
+          <polygon points="20,45 32,24 44,45" fill="var(--accent)" opacity="0.8" />
         </svg>
         <div class="brand-text">
           <span class="brand-name">STRATA</span>
-          <span class="brand-descriptor">SURFACE ATELIER</span>
+          <span class="brand-descriptor">PLY &amp; LAMINATES</span>
         </div>
       </a>
 
@@ -134,21 +132,40 @@
     <div class="drawer-backdrop"></div>
     <div class="drawer-panel">
       <div class="drawer-header">
-        <div class="brand-text">
-          <span class="brand-name">STRATA</span>
-          <span class="brand-descriptor">SURFACE ATELIER</span>
-        </div>
+        <a href="index.html" class="brand-logo">
+          <svg viewBox="0 0 64 64" width="32" height="32" aria-hidden="true">
+            <polygon points="10,50 32,14 54,50" fill="none" stroke="currentColor" stroke-width="3" />
+            <polygon points="20,45 32,24 44,45" fill="var(--accent)" opacity="0.8" />
+          </svg>
+          <div class="brand-text">
+            <span class="brand-name">STRATA</span>
+            <span class="brand-descriptor">PLY &amp; LAMINATES</span>
+          </div>
+        </a>
         <button type="button" class="drawer-close" aria-label="Close menu">&times;</button>
       </div>
 
       <nav class="drawer-nav">
         <a href="index.html" data-nav="home">Home (Classic)</a>
         <a href="home-2.html" data-nav="home-2">Home 2 (Dorby Studio)</a>
-        <a href="products.html" data-nav="products">Surfaces & Decors</a>
-        <a href="services.html" data-nav="services">Services & SLAs</a>
+        <div class="drawer-dropdown">
+          <button type="button" class="drawer-dropdown-btn" aria-expanded="false">
+            <span>Surfaces &amp; Decors</span>
+            <svg class="drawer-dropdown-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-9"/></svg>
+          </button>
+          <div class="drawer-dropdown-content">
+            <a href="products.html">✦ All Products &amp; Finishes</a>
+            <a href="products.html?cat=laminates">· Dorby Laminates (0.8–1.25mm)</a>
+            <a href="products.html?cat=edge">· Dorby Edge Bandings</a>
+            <a href="products.html?cat=asa">· ASA Weatherproof Panels</a>
+            <a href="products.html?cat=acrylic">· 6H Acrylic Mirror &amp; Matte</a>
+            <a href="products.html?cat=plywood">· IS:710 Marine Calibrated Ply</a>
+          </div>
+        </div>
+        <a href="services.html" data-nav="services">Services &amp; SLAs</a>
         <a href="about.html" data-nav="about">About Atelier</a>
         <a href="bulk-pricing.html" data-nav="pricing">Bulk Pricing</a>
-        <a href="contact.html" data-nav="contact">Contact & Studio</a>
+        <a href="contact.html" data-nav="contact">Contact &amp; Studio</a>
       </nav>
 
       <div class="drawer-surfaces-preview">
@@ -287,16 +304,23 @@
 
     <section class="section section-dark" aria-labelledby="compare-heading">
       <div class="container reveal">
-        <h2 id="compare-heading" class="section-heading">Retail vs Bulk</h2>
-        <div class="comparison-visual" style="margin-top:2rem;background:transparent;gap:1rem">
-          <div class="comparison-col" style="background:color-mix(in srgb, currentColor 6%, transparent);color:inherit">
-            <h3>Counter Purchase</h3>
-            <p style="margin-top:0.75rem;opacity:0.85">Small lots, immediate pickup, standard MRP-based pricing.</p>
+        <h2 id="compare-heading" class="section-heading" style="text-align:center">Retail vs Bulk Supply Modes</h2>
+        <div class="comparison-visual" style="margin-top:2rem;background:transparent;gap:1.5rem">
+          <div class="comparison-col" style="background:color-mix(in srgb, currentColor 6%, transparent);color:inherit;display:flex;flex-direction:column;align-items:flex-start">
+            <div style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,0.08);margin-bottom:1rem;color:var(--accent)">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <h3 style="font-size:1.4rem">Counter &amp; Retail Purchase</h3>
+            <p style="margin-top:0.75rem;opacity:0.85;line-height:1.6">Single-sheet requirements, urgent carpentry touch-ups, walk-in counter collection with instant GST invoice and spot payment.</p>
+            <a href="contact.html" class="btn btn-outline" style="margin-top:1.5rem;border-color:rgba(255,255,255,0.25);color:inherit">Retail Order Desk</a>
           </div>
-          <div class="comparison-col highlight" style="background:color-mix(in srgb, var(--accent) 25%, transparent);border:1px solid var(--accent-soft)">
-            <h3>Bulk Enquiry</h3>
-            <p style="margin-top:0.75rem;opacity:0.85">Slab discounts, project scheduling, and account history.</p>
-            <a href="contact.html" class="btn btn-accent" style="margin-top:1rem">Contact Studio</a>
+          <div class="comparison-col highlight" style="background:color-mix(in srgb, var(--accent) 25%, transparent);border:1px solid var(--accent-soft);display:flex;flex-direction:column;align-items:flex-start">
+            <div style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;background:var(--accent);margin-bottom:1rem;color:#fff">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <h3 style="font-size:1.4rem">Bulk &amp; Contract Supply</h3>
+            <p style="margin-top:0.75rem;opacity:0.85;line-height:1.6">Volume slab discounting, staged truck dispatches, dedicated account manager, brand-matched edge bands, and credit terms.</p>
+            <a href="contact.html" class="btn btn-accent" style="margin-top:1.5rem">Contact Bulk Studio Desk</a>
           </div>
         </div>
       </div>
@@ -307,14 +331,59 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="brand-logo"><svg viewBox="0 0 64 64" width="40" height="40"><path d="M12 44 L32 18 L52 44" stroke="var(--accent)" stroke-width="3" fill="none"/></svg><div class="brand-text"><span class="brand-name">STRATA</span><span class="brand-descriptor">PLY & LAMINATES</span></div></a>
-          <p>Volume supply and container pricing for plywood, laminates, acrylic panels, and edge bands.</p>
+          <a href="index.html" class="brand-logo">
+            <svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true">
+              <polygon points="10,50 32,14 54,50" fill="none" stroke="currentColor" stroke-width="3" />
+              <polygon points="20,45 32,24 44,45" fill="var(--accent)" opacity="0.8" />
+            </svg>
+            <div class="brand-text"><span class="brand-name">STRATA</span><span class="brand-descriptor">PLY &amp; LAMINATES</span></div>
+          </a>
+          <p>Premium plywood, laminates, acrylic panels, and edge bands — architectural surface solutions across India.</p>
+          <div class="social-row">
+            <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="18" cy="6" r="1" fill="currentColor" /></svg></a>
+            <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg></a>
+            <a href="#" aria-label="X"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg></a>
+            <a href="#" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" /></svg></a>
+          </div>
         </div>
-        <div class="footer-col"><h4>Pages</h4><ul><li><a href="index.html">Home (Trade)</a></li><li><a href="home-2.html">Home 2 (Decor)</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li></ul></div>
-        <div class="footer-col"><h4>Trade</h4><ul><li><a href="products.html">Products</a></li><li><a href="bulk-pricing.html">Bulk Pricing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-        <div class="footer-col"><h4>Studio</h4><ul><li><a href="services.html">Swatch Dispatch</a></li><li><a href="about.html">Quality & ISI Grades</a></li></ul></div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home (Trade)</a></li>
+            <li><a href="home-2.html">Home 2 (Decor)</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Catalog &amp; Supply</h4>
+          <ul>
+            <li><a href="products.html">Products &amp; Finishes</a></li>
+            <li><a href="bulk-pricing.html">Volume Slabs</a></li>
+            <li><a href="#" data-modal-open="modal-bulk">Sample Request</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Studio Desk</h4>
+          <ul>
+            <li><a href="contact.html">Contact &amp; Showroom</a></li>
+            <li><a href="services.html">Edge Band Matching</a></li>
+            <li><a href="about.html">Quality &amp; ISI Grades</a></li>
+          </ul>
+        </div>
       </div>
-      <p class="footer-bottom">© 2026 STRATA PLY & LAMINATES · Bulk pricing indicative only</p>
+      <div class="newsletter-box">
+        <div>
+          <h3 style="font-size:1.35rem">Stay on Top of New Arrivals</h3>
+          <p style="font-size:0.9rem;color:var(--text-muted);margin-top:0.35rem">Trade newsletter — new lookbooks, synchronized shades, and bulk offers.</p>
+        </div>
+        <form class="newsletter-form" data-newsletter aria-label="Newsletter">
+          <input type="email" placeholder="Email address" required aria-label="Email">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p class="newsletter-msg" style="width:100%;font-size:0.85rem;margin-top:0.5rem"></p>
+      </div>
+      <p class="footer-bottom">© 2026 STRATA PLY &amp; LAMINATES. Inspired by leading architectural surface decor brands.</p>
     </div>
   </footer>
 

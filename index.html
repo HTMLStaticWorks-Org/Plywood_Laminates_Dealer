@@ -24,7 +24,7 @@
         </svg>
         <div class="brand-text">
           <span class="brand-name">STRATA</span>
-          <span class="brand-descriptor">SURFACE ATELIER</span>
+          <span class="brand-descriptor">PLY & LAMINATES</span>
         </div>
       </a>
 
@@ -139,7 +139,7 @@
       <div class="drawer-header">
         <div class="brand-text">
           <span class="brand-name">STRATA</span>
-          <span class="brand-descriptor">SURFACE ATELIER</span>
+          <span class="brand-descriptor">PLY & LAMINATES</span>
         </div>
         <button type="button" class="drawer-close" aria-label="Close menu">&times;</button>
       </div>
@@ -147,7 +147,20 @@
       <nav class="drawer-nav">
         <a href="index.html" data-nav="home">Home (Classic)</a>
         <a href="home-2.html" data-nav="home-2">Home 2 (Dorby Studio)</a>
-        <a href="products.html" data-nav="products">Surfaces & Decors</a>
+        <div class="drawer-dropdown">
+          <button type="button" class="drawer-dropdown-btn" aria-expanded="false">
+            <span>Surfaces & Decors</span>
+            <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="drawer-dropdown-menu">
+            <a href="products.html?cat=all" class="sub-link">All Surface Catalog</a>
+            <a href="products.html?cat=laminates" class="sub-link">Decorative Laminates</a>
+            <a href="products.html?cat=plywood" class="sub-link">710 Marine & Calibrated Plywood</a>
+            <a href="products.html?cat=acrylic" class="sub-link">Vibron 6H Acrylics</a>
+            <a href="products.html?cat=edge" class="sub-link">Matching Edge Banding</a>
+            <a href="products.html?cat=asa" class="sub-link">Architectural ASA Sheets</a>
+          </div>
+        </div>
         <a href="services.html" data-nav="services">Services & SLAs</a>
         <a href="about.html" data-nav="about">About Atelier</a>
         <a href="bulk-pricing.html" data-nav="pricing">Bulk Pricing</a>
@@ -191,7 +204,7 @@
     <!-- Section 1: Hero -->
     <section class="hero-cinematic" aria-labelledby="hero-heading">
       <div class="hero-bg">
-        <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80" class="hero-bg-video">
+        <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1920&q=80" class="hero-bg-video">
           <source src="assets/v/4248456-hd_1920_1080_24fps.mp4" type="video/mp4">
         </video>
         <button type="button" class="hero-video-toggle" data-hero-video-toggle aria-label="Toggle ambient background motion">
@@ -434,7 +447,7 @@
 
             <!-- 4.2 Matte -->
             <article class="dorby-card card-acrylic-matte">
-              <img src="https://images.unsplash.com/photo-1558997519-83ea9252def8?auto=format&fit=crop&w=700&q=80"
+              <img src="https://images.unsplash.com/photo-1540518614846-7ede433c4573?auto=format&fit=crop&w=800&q=80"
                 alt="Matte cashmere acrylic wardrobe sliding shutters" loading="lazy">
               <div class="dorby-card-tag">
                 <span class="label">Matte</span>
@@ -443,7 +456,7 @@
 
             <!-- 4.3 Mirror -->
             <article class="dorby-card card-acrylic-mirror">
-              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=700&q=80"
+              <img src="https://images.unsplash.com/photo-1588854337236-6889d631faa8?auto=format&fit=crop&w=800&q=80"
                 alt="Mirror reflective luxury display and glass bar unit" loading="lazy">
               <div class="dorby-card-tag">
                 <span class="label">Mirror</span>
@@ -452,7 +465,7 @@
 
             <!-- 4.4 Sparkle -->
             <article class="dorby-card card-acrylic-sparkle">
-              <img src="https://images.unsplash.com/photo-1615874959477-df969625fbf0?auto=format&fit=crop&w=700&q=80"
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80"
                 alt="Sparkle finish champagne textured kitchen storage drawers" loading="lazy">
               <div class="dorby-card-tag">
                 <span class="label">Sparkle</span>
@@ -479,7 +492,7 @@
             <!-- 5.1 Hero 710 Plywood with Green Seal -->
             <article class="dorby-card card-ply-hero">
               <div class="plywood-board-visual">
-                <img src="https://images.unsplash.com/photo-1533090161762-e6ffed1ab713?auto=format&fit=crop&w=900&q=80"
+                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80"
                   alt="710 Marine Grade BWP Calibrated Plywood Board" loading="lazy">
                 <div class="plywood-stamp-seal">
                   <div class="seal-circle seal-green">
@@ -550,7 +563,7 @@
           <!-- Reel 1: Core Calibration & Pressing -->
           <article class="filmstrip-card reveal">
             <div class="filmstrip-media">
-              <video class="filmstrip-video" muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1533090161762-e6ffed1ab713?auto=format&fit=crop&w=800&q=80">
+              <video class="filmstrip-video" muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80">
                 <source src="assets/v/8447821-hd_1920_1080_30fps.mp4" type="video/mp4">
               </video>
               <span class="filmstrip-badge">Core Pressing</span>
@@ -818,10 +831,18 @@
     <!-- Section 5: Journey timeline -->
     <section class="section" aria-labelledby="journey-heading">
       <div class="container">
-        <div class="journey-section-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start">
-          <div>
-            <p class="eyebrow reveal">How We Work</p>
-            <h2 id="journey-heading" class="section-heading reveal">From Enquiry to Dispatch</h2>
+        <div class="journey-section-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start">
+          <div class="reveal">
+            <p class="eyebrow">How We Work</p>
+            <h2 id="journey-heading" class="section-heading">From Enquiry to Dispatch</h2>
+            <p style="margin-top:1rem;color:var(--text-secondary);max-width:44ch">
+              From automated BOQ analysis to single-lot batch dispatch and express jobsite logistics.
+            </p>
+            <div style="margin-top:2rem;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-md)">
+              <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80"
+                alt="Plywood sheets and calibrated panel dispatch in climate-controlled warehouse"
+                loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block">
+            </div>
           </div>
           <div class="journey-timeline reveal">
             <div class="journey-line"></div>
@@ -900,14 +921,17 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="brand-logo">
-            <svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true">
-              <rect width="64" height="64" rx="12" fill="currentColor" opacity="0.15" />
-              <path d="M12 44 L32 18 L52 44" stroke="var(--accent)" stroke-width="3" />
-              <line x1="12" y1="44" x2="52" y2="44" stroke="currentColor" stroke-width="2" />
+          <a href="index.html" class="brand-logo" aria-label="STRATA Home">
+            <svg viewBox="0 0 64 64" width="38" height="38" fill="none" aria-hidden="true">
+              <rect width="64" height="64" rx="14" fill="currentColor" opacity="0.12" />
+              <path d="M14 46 L32 18 L50 46" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              <line x1="14" y1="46" x2="50" y2="46" stroke="var(--text-primary)" stroke-width="2.5" stroke-linecap="round" />
+              <circle cx="32" cy="14" r="3.5" fill="var(--accent)" />
             </svg>
-            <div class="brand-text"><span class="brand-name">STRATA</span><span class="brand-descriptor">PLY &
-                LAMINATES</span></div>
+            <div class="brand-text">
+              <span class="brand-name">STRATA</span>
+              <span class="brand-descriptor">PLY & LAMINATES</span>
+            </div>
           </a>
           <p>Premium plywood and laminate dealer — trade supply inspired by leading surface brands nationwide.</p>
           <div class="social-row">
