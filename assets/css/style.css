@@ -1483,43 +1483,74 @@ h1, h2, h3, h4 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  align-items: stretch;
 }
 
 .product-item {
   background: var(--bg-elevated);
   border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   opacity: 1;
-  transition: opacity 0.4s ease, transform var(--transition);
+  transition: opacity 0.4s ease, transform var(--transition), border-color var(--transition);
+}
+
+.product-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
 }
 
 .product-item.hidden {
-  display: none;
-}
-
-.product-item.featured {
-  grid-column: span 2;
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  display: none !important;
 }
 
 .product-item .pi-image {
-  aspect-ratio: 1;
+  aspect-ratio: 16 / 10;
+  width: 100%;
   overflow: hidden;
-}
-
-.product-item.featured .pi-image {
-  aspect-ratio: auto;
-  min-height: 280px;
+  background: var(--bg-secondary);
 }
 
 .product-item .pi-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-item:hover .pi-image img {
+  transform: scale(1.04);
 }
 
 .product-item .pi-meta {
-  padding: 1.25rem;
+  padding: 1.35rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-item .pi-meta h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.product-item .pi-meta p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 1.15rem;
+  flex-grow: 1;
+}
+
+.product-item .pi-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: auto;
 }
 
 .finish-badge {
@@ -1529,8 +1560,7 @@ h1, h2, h3, h4 {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   background: var(--bg-secondary);
-  margin-right: 0.35rem;
-  margin-top: 0.5rem;
+  border-radius: 4px;
 }
 
 [dir='rtl'] .finish-badge {
@@ -2900,10 +2930,6 @@ h1, h2, h3, h4 {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .product-item.featured {
-    grid-column: span 2;
-  }
-
   .benefits-grid-4 {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -3132,11 +3158,6 @@ h1, h2, h3, h4 {
   }
 
   .products-masonry {
-    grid-template-columns: 1fr;
-  }
-
-  .product-item.featured {
-    grid-column: span 1;
     grid-template-columns: 1fr;
   }
 
