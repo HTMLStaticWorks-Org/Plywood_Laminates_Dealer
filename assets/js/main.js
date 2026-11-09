@@ -515,8 +515,25 @@
   function initHeroVideoToggle() {
     const btn = document.querySelector('[data-hero-video-toggle]');
     const video = document.querySelector('.hero-bg-video');
-    if (!btn || !video) return;
+    if (!video) return;
 
+    // Autoplay unlock
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        const unlock = () => {
+          video.play().catch(() => {});
+          document.removeEventListener('click', unlock);
+          document.removeEventListener('touchstart', unlock);
+          document.removeEventListener('scroll', unlock);
+        };
+        document.addEventListener('click', unlock, { once: true });
+        document.addEventListener('touchstart', unlock, { once: true });
+        document.addEventListener('scroll', unlock, { once: true });
+      });
+    }
+
+    if (!btn) return;
     btn.addEventListener('click', () => {
       if (video.paused) {
         video.play();
@@ -668,9 +685,10 @@
 
   /* ——— FAQ Accordion ——— */
   function initFAQ() {
-    document.querySelectorAll('.faq-btn').forEach((btn) => {
+    const buttons = document.querySelectorAll('.faq-btn, .faq-question');
+    buttons.forEach((btn) => {
       btn.addEventListener('click', () => {
-        const card = btn.closest('.faq-card');
+        const card = btn.closest('.faq-card, .faq-item');
         if (!card) return;
         const isOpen = card.classList.contains('open');
         card.classList.toggle('open', !isOpen);
