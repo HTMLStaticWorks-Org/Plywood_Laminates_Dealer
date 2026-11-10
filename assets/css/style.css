@@ -2349,30 +2349,55 @@ h1, h2, h3, h4 {
 
 .newsletter-box {
   margin-top: 3rem;
-  padding: 2rem;
+  padding: 2.25rem 2.5rem;
   background: var(--bg-secondary);
   border: 1px solid var(--border);
+  border-radius: var(--radius-md);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: 1.75rem;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.newsletter-box > div {
+  flex: 1 1 300px;
+  min-width: 0;
 }
 
 .newsletter-form {
   display: flex;
-  gap: 0.5rem;
-  flex: 1;
-  min-width: 260px;
+  gap: 0.75rem;
+  flex: 1 1 340px;
+  max-width: 480px;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .newsletter-form input {
-  flex: 1;
-  padding: 0.85rem 1rem;
+  flex: 1 1 180px;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  padding: 0.85rem 1.15rem;
   border: 1px solid var(--border);
   background: var(--bg-elevated);
   color: var(--text-primary);
   border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 0.92rem;
+  box-sizing: border-box;
+}
+
+.newsletter-form .btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
 }
 
 .footer-bottom {
@@ -3688,13 +3713,44 @@ h1, h2, h3, h4 {
   }
 
   .newsletter-box {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: 1.75rem 1.25rem !important;
+    gap: 1.25rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .newsletter-box > div {
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .newsletter-form {
-    flex-direction: column;
-    width: 100%;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 0.75rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .newsletter-form input {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    text-align: center;
+    padding: 0.85rem 1rem !important;
+  }
+
+  .newsletter-form .btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
   }
 
   .comparison-visual {
@@ -3806,6 +3862,27 @@ h1, h2, h3, h4 {
 
   .cta-banner-grid {
     gap: 1.5rem !important;
+  }
+
+  .newsletter-box {
+    padding: 1.35rem 0.95rem !important;
+    border-radius: var(--radius) !important;
+  }
+
+  .site-footer {
+    padding-bottom: 4rem !important;
+  }
+
+  .back-to-top {
+    bottom: 1.25rem !important;
+    right: 1.25rem !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  [dir='rtl'] .back-to-top {
+    left: 1.25rem !important;
+    right: auto !important;
   }
 }
 
