@@ -4758,11 +4758,20 @@ h1, h2, h3, h4 {
     word-break: break-word !important;
   }
   .contact-social-row {
-    flex-direction: column !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
     gap: 0.65rem !important;
+    width: 100% !important;
+    max-width: calc(100% - 2.5rem) !important;
   }
   .contact-social-btn {
-    width: 100% !important;
+    display: inline-flex !important;
+    width: auto !important;
+    flex: 0 0 auto !important;
+    padding: 0.55rem 0.95rem !important;
+    font-size: 0.82rem !important;
+    border-radius: var(--radius-sm) !important;
   }
   .member-card-interactive {
     padding: 1.5rem 1.15rem !important;
