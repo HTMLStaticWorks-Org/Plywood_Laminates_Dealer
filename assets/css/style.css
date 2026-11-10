@@ -3653,6 +3653,38 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 768px) {
+  /* Mobile clean docked navbar: edge-to-edge, eliminates floating island and gaps cutting headers */
+  .site-header {
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    padding-inline: 0 !important;
+    background: var(--bg-primary) !important;
+    border-bottom: 1px solid var(--border) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
+  }
+
+  [data-theme='dark'] .site-header {
+    background: #141210 !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35) !important;
+  }
+
+  .site-header .nav-inner {
+    height: 60px !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 1.25rem !important;
+    max-width: 100% !important;
+    background: transparent !important;
+  }
+
+  /* Permanently hide floating back-to-top on mobile so it never obstructs interactive buttons or cards */
+  .back-to-top {
+    display: none !important;
+  }
+
   .lookbook-grid,
   .services-grid,
   .about-stat-strip,
@@ -3867,22 +3899,6 @@ h1, h2, h3, h4 {
   .newsletter-box {
     padding: 1.35rem 0.95rem !important;
     border-radius: var(--radius) !important;
-  }
-
-  .site-footer {
-    padding-bottom: 4rem !important;
-  }
-
-  .back-to-top {
-    bottom: 1.25rem !important;
-    right: 1.25rem !important;
-    width: 40px !important;
-    height: 40px !important;
-  }
-
-  [dir='rtl'] .back-to-top {
-    left: 1.25rem !important;
-    right: auto !important;
   }
 }
 
@@ -4763,7 +4779,6 @@ h1, h2, h3, h4 {
     flex-wrap: wrap !important;
     gap: 0.65rem !important;
     width: 100% !important;
-    max-width: calc(100% - 2.5rem) !important;
   }
   .contact-social-btn {
     display: inline-flex !important;
