@@ -2189,11 +2189,14 @@ h1, h2, h3, h4 {
   align-items: start;
 }
 
-.form-card {
-  padding: 2rem;
+.form-card,
+.contact-info-card {
+  padding: 2.25rem 2rem;
   background: var(--bg-elevated);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-md);
+  box-sizing: border-box;
 }
 
 .form-group {
@@ -4739,11 +4742,13 @@ h1, h2, h3, h4 {
     gap: 2rem !important;
     width: 100% !important;
   }
-  .form-card {
-    padding: 1.5rem 1.15rem !important;
+  .form-card,
+  .contact-info-card {
+    padding: 1.5rem 1.25rem !important;
     border-radius: var(--radius-md) !important;
     box-sizing: border-box !important;
     width: 100% !important;
+    overflow: hidden !important;
   }
   .form-group input,
   .form-group select,
