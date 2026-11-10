@@ -685,15 +685,15 @@
 
   /* ——— FAQ Accordion ——— */
   function initFAQ() {
-    const buttons = document.querySelectorAll('.faq-btn, .faq-question');
-    buttons.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const card = btn.closest('.faq-card, .faq-item');
-        if (!card) return;
-        const isOpen = card.classList.contains('open');
-        card.classList.toggle('open', !isOpen);
-        btn.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
-      });
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('.faq-btn, .faq-question');
+      if (!btn) return;
+      e.preventDefault();
+      const card = btn.closest('.faq-card, .faq-item');
+      if (!card) return;
+      const isOpen = card.classList.contains('open');
+      card.classList.toggle('open', !isOpen);
+      btn.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
     });
   }
 
